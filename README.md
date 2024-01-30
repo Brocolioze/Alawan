@@ -12,7 +12,7 @@ https://donkey.school/article/les-conventions-de-nommage-et-decriture-de-code
 Pour ce projet d'integration 2 nous utliserons le camelCase. Une norme en programmation qui consiste à écrire des mots ou des phrases composés de telle sorte que chaque mot ou abréviation au milieu de la phrase 
 commence par une majuscule, sans espace ni ponctuation.
 
-# Style  d'indentation
+## Style  d'indentation
 
 En informatique, l'indentation consiste en l'ajout de tabulations ou d'espaces dans un fichier texte. Le style d'indentation décrit les différentes manières que les programmeurs utilisent pour faire ressortir un bloc de code.
 L'indentation se définit par la manière d'arranger les blocs de code, mais surtout par le nombre d'espaces utilisés à chaque niveau.
