@@ -19,6 +19,7 @@ L'indentation se définit par la manière d'arranger les blocs de code, mais sur
 L'indentation peut ne pas être qu'esthétique. En effet, elle s'avère obligatoire pour certains langages afin de former des blocs ou des lignes valides (par exemple Occam, Fortran ou Python).
 
 Style Allman
+
 Nommé d'après Eric Allman, ce style respecte un alignement strict des accolades ouvrantes et fermantes, comme dans l'exemple ci-dessous :
 
 void a_function(void)
@@ -35,6 +36,5 @@ void a_function(void)
     }
     finalthing();
 }
-
 
 
