@@ -24,3 +24,6 @@ Nommé d'après Eric Allman, ce style respecte un alignement strict des accolade
 
 ![image](https://github.com/Brocolioze/Alawan/assets/49524886/d9595ef8-3522-41e9-899f-015ff31f5a02)
 
+Site de référence:
+https://fr.wikipedia.org/wiki/Style_d%27indentation
+
