@@ -2,20 +2,18 @@
 
 Les différentes conventions de nommage qui existe
 Le camelCase
-Exemple: myUrl
+myUrl
 
 Le PascalCase
-Exemple: MyUrl
-
+MyUrl
 
 Le WikiCase
-Exemple: MyUrl
-
+MyUrl
 
 Le Kebab Case
-Exemple: my-url
+my-url
 
 Snake Case ou Underscore Case
-Exemple: my_url
+my_url
 
 https://donkey.school/article/les-conventions-de-nommage-et-decriture-de-code
