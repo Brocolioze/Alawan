@@ -43,6 +43,9 @@ Pour ce projet nous déclarerons les commentaires tout en haut de chaque program
 
 ![image](https://github.com/Brocolioze/Alawan/assets/49524886/187960e1-3f93-4cf7-88a2-04e2db6de208)
 
+Site de référence:
+https://itexpert.fr/blog/commentaires-parfaits/
+
 
 
 
