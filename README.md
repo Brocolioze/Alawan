@@ -4,7 +4,7 @@
 
 Les différentes conventions de nommage qui existe en programmation
 
-![image](https://github.com/Brocolioze/Alawan/assets/49524886/b7477cb0-3035-4b47-aacd-b07c320165ba)
+![image](https://github.com/Brocolioze/Alawan/assets/49524886/acd132d5-d7c6-4632-ab11-93015007f1c2)
 
 Site de référence:
 https://donkey.school/article/les-conventions-de-nommage-et-decriture-de-code
