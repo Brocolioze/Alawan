@@ -2,21 +2,6 @@
 
 Les différentes conventions de nommage qui existe en programmation
 
-## Le camelCase:
-## myUrl
-
-Le PascalCase:
-MyUrl
-
-Le WikiCase:
-MyUrl
-
-Le Kebab Case:
-my-url
-
-Snake Case ou Underscore Case:
-my_url
-
 ![image](https://github.com/Brocolioze/Alawan/assets/49524886/b7477cb0-3035-4b47-aacd-b07c320165ba)
 
 Site de référence:
