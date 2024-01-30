@@ -31,7 +31,7 @@ https://fr.wikipedia.org/wiki/Style_d%27indentation
 
 Les fonctions, classes, méthodes ou variables devront etre nommés au tout début par leur valeur de type de retour suivi par le nom de leur classe et leur fonctionnalité ou opération.
 
-# ex: doublePackageMultiplication()
+### ex: doublePackageMultiplication()
 
 
 
