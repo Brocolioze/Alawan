@@ -33,6 +33,12 @@ Les fonctions, classes, méthodes ou variables devront etre nommés au tout déb
 
 ### ex: doublePackageNomDeClasseMultiplication()
 
+## Les commentaires 
+
+Les commentaires sont, en programmation informatique, des portions du code source ignorées par le compilateur ou l’interpréteur, car destinées en général à un lecteur humain et non censées influencer l’exécution du programme.Les commentaires sont le plus souvent utilisés pour expliquer le code 
+
+Pour ce projet nous déclarerons les commentaires tout en haut de chaque programme et au début de chaque fonction.
+
 
 
 
