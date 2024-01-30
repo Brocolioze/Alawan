@@ -1,19 +1,20 @@
 ## Norme de Programmation
 
-Les différentes conventions de nommage qui existe
-Le camelCase
+Les différentes conventions de nommage qui existe en programmation
+Le camelCase:
 myUrl
 
-Le PascalCase
+Le PascalCase:
 MyUrl
 
-Le WikiCase
+Le WikiCase:
 MyUrl
 
-Le Kebab Case
+Le Kebab Case:
 my-url
 
-Snake Case ou Underscore Case
+Snake Case ou Underscore Case:
 my_url
 
+Site de référence:
 https://donkey.school/article/les-conventions-de-nommage-et-decriture-de-code
