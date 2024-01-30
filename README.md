@@ -18,7 +18,7 @@ En informatique, l'indentation consiste en l'ajout de tabulations ou d'espaces d
 L'indentation se définit par la manière d'arranger les blocs de code, mais surtout par le nombre d'espaces utilisés à chaque niveau.
 L'indentation peut ne pas être qu'esthétique. En effet, elle s'avère obligatoire pour certains langages afin de former des blocs ou des lignes valides (par exemple Occam, Fortran ou Python).
 
-Style Allman
+# Style Allman 
 
 Nommé d'après Eric Allman, ce style respecte un alignement strict des accolades ouvrantes et fermantes, comme dans l'exemple ci-dessous :
 
