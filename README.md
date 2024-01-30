@@ -39,6 +39,9 @@ Les commentaires sont, en programmation informatique, des portions du code sourc
 
 Pour ce projet nous déclarerons les commentaires tout en haut de chaque programme et au début de chaque fonction.
 
+![image](https://github.com/Brocolioze/Alawan/assets/49524886/124bd1a6-1464-43bc-87e0-1beb39e7d00c)
+
+
 
 
 
