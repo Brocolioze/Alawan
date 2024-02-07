@@ -18,7 +18,7 @@
 <div class="desktop-1-bR5">
   <div class="auto-group-jcdh-vbm">
     <div id="aboutUsId" class="group-4-cN7">
-      <img class="pexels-bin-ziegler-1364756-1-TtX" src="img/pexels-bin-ziegler-1364756-1.png"/>
+      <img class="pexels-bin-ziegler-1364756-1-TtX" src="{{ asset('img/pexels-bin-ziegler-1364756-1.png')}}"/>
       <div class="auto-group-cgut-vGK">
         <div class="about-us-oqu">About Us </div>
         <div class="alawan-is-all-about-community-and-compassion-for-our-four-legged-friends-were-dedicated-to-uniting-dog-owners-and-animal-lovers-to-help-reunite-families-with-their-lost-canine-companions-TvT">Alawan is all about community and compassion for our four-legged friends. We&#39;re dedicated to uniting dog owners and animal lovers to help reunite families with their lost canine companions.</div>
