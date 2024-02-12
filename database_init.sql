@@ -1,90 +1,78 @@
 CREATE DATABASE BDAlawan;
 
-DROP TABLE Research IF EXISTS;
-DROP TABLE Alert IF EXISTS;
+DROP TABLE AlertUser IF EXISTS;
+DROP TABLE AlertFound IF EXISTS;
 DROP TABLE AnimalColour IF EXISTS;
 DROP TABLE Animal IF EXISTS;
-DROP TABLE Person IF EXISTS;
+DROP TABLE User IF EXISTS;
 DROP TABLE Address IF EXISTS;
 DROP TABLE Colour IF EXISTS;
 DROP TABLE Race IF EXISTS;
 
 CREATE TABLE Race (
-	id int NOT NULL,
-	race varchar(20) NOT NULL, 
+	id int AUTO_INCREMENT,
+	race varchar(20), 
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE Colour (
-	id int NOT NULL,
-	colour varchar(16) NOT NULL, 
+CREATE TABLE Color (
+	id int AUTO_INCREMENT,
+	color varchar(16), 
 	PRIMARY KEY (id)
 );
 
 CREATE TABLE Address (
-	id int NOT NULL,
-	city varchar(24) NOT NULL,
-	street varchar(64) NOT NULL,
-	number int NOT NULL,
-	postalCode varchar(10) NOT NULL,
+	id int AUTO_INCREMENT,
+	city varchar(24),
+	street varchar(64),
+	number int,
+	postalCode varchar(10),
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE Person (
-	id int NOT NULL,
+CREATE TABLE User (
+	id int AUTO_INCREMENT,
 	idAddress int,
 	name varchar(40), 
 	lastName varchar(40),
 	email varchar(63),
 	password varchar(127),
 	phone varchar(17),
+	creationDate DATE,
 	PRIMARY KEY (id),
 	FOREIGN KEY idAddress REFERENCES Address(id)
 );
 
 CREATE TABLE Animal (
-	id int NOT NULL,
-	idPerson int NOT NULL,
-	idRace int NOT NULL,
+	id int AUTO_INCREMENT,
+	idPerson int,
+	idRace int,
 	name varchar(63),
 	picture varchar(255),
 	birth date,
-	research boolean not null,
+	research boolean ,
 	PRIMARY KEY (id),
 	FOREIGN KEY idPerson REFERENCES Person(id),
 	FOREIGN KEY idRace REFERENCES Race(id)
 );
 
-CREATE TABLE AnimalColour (
-	id int NOT NULL,
-	idAnimal NOT NULL,
-	idColour NOT NULL,
+CREATE TABLE AnimalColor (
+	id int AUTO_INCREMENT,
+	idAnimal int,
+	idColor int,
 	PRIMARY KEY (id),
 	FOREIGN KEY idAnimal REFERENCES Animal(id),
-	FOREIGN KEY idColour REFERENCES Colour(id)
+	FOREIGN KEY idColor REFERENCES Color(id)
 );
 
 CREATE TABLE Alert (
-	id int NOT NULL,
-	idAnimal int NOT NULL,
-	idRace int NOT NULL,
-	dateLost date NOT NULL,
-	dateFind date NOT NULL,
-	place varchar(64) NOT NULL,
+	id int AUTO_INCREMENTL,
+	idAnimal int,
+	dateLost date,
+	find boolean,
+	place varchar(64) ,
 	description varchar(255),
-	invite boolean NOT NULL,
-	PRIMARY KEY (id),
-	FOREIGN KEY idPAnimal REFERENCES Animal(id)
-);
-
-CREATE TABLE Research (
-	id int NOT NULL,
-	idAnimal int NOT NULL,
-	idRace int NOT NULL,
-	dateLost date NOT NULL,
-	dateFind date NOT NULL,
-	place varchar(64) NOT NULL,
-	description varchar(255),
+	invite boolean,
 	PRIMARY KEY (id),
 	FOREIGN KEY idPAnimal REFERENCES Animal(id)
 );
