@@ -1,10 +1,9 @@
 CREATE DATABASE BDAlawan;
 
-DROP TABLE AlertUser IF EXISTS;
-DROP TABLE AlertFound IF EXISTS;
+DROP TABLE Alert IF EXISTS;
 DROP TABLE AnimalColour IF EXISTS;
 DROP TABLE Animal IF EXISTS;
-DROP TABLE User IF EXISTS;
+DROP TABLE Person IF EXISTS;
 DROP TABLE Address IF EXISTS;
 DROP TABLE Colour IF EXISTS;
 DROP TABLE Race IF EXISTS;
@@ -30,7 +29,7 @@ CREATE TABLE Address (
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE User (
+CREATE TABLE Person (
 	id int AUTO_INCREMENT,
 	idAddress int,
 	name varchar(40), 
@@ -66,7 +65,7 @@ CREATE TABLE AnimalColor (
 );
 
 CREATE TABLE Alert (
-	id int AUTO_INCREMENTL,
+	id int AUTO_INCREMENT,
 	idAnimal int,
 	dateLost date,
 	find boolean,
