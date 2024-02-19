@@ -37,6 +37,7 @@ CREATE TABLE Person (
 	email varchar(63),
 	password varchar(127),
 	phone varchar(17),
+	invite boolean,
 	creationDate DATE,
 	PRIMARY KEY (id),
 	FOREIGN KEY idAddress REFERENCES Address(id)
@@ -68,10 +69,10 @@ CREATE TABLE Alert (
 	id int AUTO_INCREMENT,
 	idAnimal int,
 	dateLost date,
-	find boolean,
+	dateFind boolean,
 	place varchar(64) ,
 	description varchar(255),
-	invite boolean,
+	alerteFound boolean,
 	PRIMARY KEY (id),
 	FOREIGN KEY idPAnimal REFERENCES Animal(id)
 );
