@@ -24,7 +24,7 @@ CREATE TABLE Address (
 	id int AUTO_INCREMENT,
 	city varchar(24),
 	street varchar(64),
-	number int,
+	doorNumber int,
 	postalCode varchar(10),
 	PRIMARY KEY (id)
 );
