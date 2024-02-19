@@ -1,5 +1,3 @@
-CREATE DATABASE BDAlawan;
-
 DROP TABLE Alert IF EXISTS;
 DROP TABLE AnimalColour IF EXISTS;
 DROP TABLE Animal IF EXISTS;
@@ -39,8 +37,7 @@ CREATE TABLE Person (
 	phone varchar(17),
 	invite boolean,
 	creationDate DATE,
-	PRIMARY KEY (id),
-	FOREIGN KEY idAddress REFERENCES Address(id)
+	PRIMARY KEY (id)
 );
 
 CREATE TABLE Animal (
@@ -51,18 +48,14 @@ CREATE TABLE Animal (
 	picture varchar(255),
 	birth date,
 	research boolean ,
-	PRIMARY KEY (id),
-	FOREIGN KEY idPerson REFERENCES Person(id),
-	FOREIGN KEY idRace REFERENCES Race(id)
+	PRIMARY KEY (id)
 );
 
 CREATE TABLE AnimalColor (
 	id int AUTO_INCREMENT,
 	idAnimal int,
 	idColor int,
-	PRIMARY KEY (id),
-	FOREIGN KEY idAnimal REFERENCES Animal(id),
-	FOREIGN KEY idColor REFERENCES Color(id)
+	PRIMARY KEY (id)
 );
 
 CREATE TABLE Alert (
@@ -73,6 +66,5 @@ CREATE TABLE Alert (
 	place varchar(64) ,
 	description varchar(255),
 	alerteFound boolean,
-	PRIMARY KEY (id),
-	FOREIGN KEY idPAnimal REFERENCES Animal(id)
+	PRIMARY KEY (id)
 );
