@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%3A400"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A400%2C600"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400%2C600"/>
-  <link rel="stylesheet" href="css/desktop-1.css"/>
+  <link rel="stylesheet" href="{{asset(css/desktop-1.css)}}"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
