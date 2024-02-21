@@ -205,7 +205,6 @@ input {
 
 
 .auto-group-ia8v-jEW {
-  margin-bottom: 4.2rem;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -1331,223 +1330,21 @@ input {
   vertical-align: top;
 }
  .div-framer-72rtr7-idc  .div-framer-11v3gxp-hne {
-  position: relative;
   display: flex;
   align-items: center;
   background-color: #ffffff;
   flex-wrap: wrap;
-  align-content: center;
+  align-content: center;justify-content: center;
 }
  .div-framer-72rtr7-idc .group-RCr {
   margin-bottom: 5rem;
-  align-items: center;
 }
  .div-framer-72rtr7-idc .group-RCr .bg-Lqc {
   width: 30rem;
   height: 9rem;
-
+  justify-self: center;
 }
- .div-framer-72rtr7-idc .group-RCr .noise-sqY {
-  width: 40rem;
-  height: 12.5094rem;
-  
-  object-fit: contain;
-  vertical-align: top;
-}
- .div-framer-72rtr7-idc .group-RCr .icon-pEz {
-  width: 6.9187rem;
-  height: 8.2913rem;
-  position: absolute;
-  left: 3rem;
-  top: 2.0205rem;
-  object-fit: contain;
-  vertical-align: top;
-}
- .div-framer-72rtr7-idc   .group-RCr .download-on-the-keS {
-  width: 25.8437rem;
-  height: 2.2698rem;
-  position: absolute;
-  left: 12rem;
-  top: 2.1307rem;
-  display: flex;
-  align-items: flex-end;
-}
- .div-framer-72rtr7-idc   .group-RCr .download-on-the-keS .d-rSa {
-  margin: 0rem 0.414rem 0.016rem 0rem;
-  width: 1.7913rem;
-  height: 2.1596rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .download-on-the-keS .o-z2z {
-  margin-right: 0.342rem;
-  width: 1.539rem;
-  height: 1.598rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .download-on-the-keS .w-L6r {
-  margin: 0rem 0.434rem 0.035rem 0rem;
-  width: 2.2767rem;
-  height: 1.532rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .download-on-the-keS .n-ThG {
-  margin: 0rem 0.614rem 0.035rem 0rem;
-  width: 1.3773rem;
-  height: 1.5642rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .download-on-the-keS .l-c4N {
-  margin: 0rem 0.518rem 0.035rem 0rem;
-  width: 0.349rem;
-  height: 2.235rem;
-  background-color: #ffffff;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .download-on-the-keS .o-YCv {
-  margin-right: 0.4007rem;
-  width: 1.539rem;
-  height: 1.598rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .download-on-the-keS .a-5ie {
-  margin-right: 0.485rem;
-  width: 1.29rem;
-  height: 1.598rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .download-on-the-keS .d-2tn {
-  margin: 0rem 1.449rem 0rem 0rem;
-  width: 1.5rem;
-  height: 2.2698rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .download-on-the-keS .o-mrN {
-  margin-right: 0.5013rem;
-  width: 1.539rem;
-  height: 1.598rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .download-on-the-keS .n-Xae {
-  margin: 0rem 1.394rem 0.035rem 0rem;
-  width: 1.377rem;
-  height: 1.5642rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .download-on-the-keS .t-GHL {
-  margin: 0rem 0.485rem 0.003rem 0rem;
-  width: 0.957rem;
-  height: 1.9451rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .download-on-the-keS .h-Cgn {
-  margin: 0rem 0.511rem 0.035rem 0rem;
-  width: 1.3647rem;
-  height: 2.235rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .download-on-the-keS .e-kCW {
-  margin-bottom: 0.0062rem;
-  width: 1.397rem;
-  height: 1.5948rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .app-store-HCS {
-  width: 26.582rem;
-  height: 5.6592rem;
-  position: absolute;
-  left: 12rem;
-  top: 5.8503rem;
-  display: flex;
-  align-items: center;
-}
- .div-framer-72rtr7-idc   .group-RCr .app-store-HCS .a-CaJ {
-  margin: 0rem 0.592rem 1.207rem 0rem;
-  width: 3.745rem;
-  height: 4.3251rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .app-store-HCS .p-XsU {
-  margin: 1.206rem 0.599rem 0rem 0rem;
-  width: 3.0803rem;
-  height: 4.4535rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .app-store-HCS .p-Gq4 {
-  margin: 1.206rem 1.361rem 0rem 0rem;
-  width: 3.08rem;
-  height: 4.4535rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .app-store-HCS .s-p5t {
-  margin: 0rem 0.402rem 1.207rem 0rem;
-  width: 2.752rem;
-  height: 4.4525rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .app-store-HCS .t-Yna {
-  margin: 0rem 0.401rem 0.714rem 0rem;
-  width: 1.948rem;
-  height: 3.9595rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .app-store-HCS .o-63Q {
-  margin: 0.006rem 0.599rem 0rem 0rem;
-  width: 3.133rem;
-  height: 3.2529rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .app-store-HCS .r-pk6 {
-  margin: 0rem 0.336rem 0.065rem 0rem;
-  width: 1.7113rem;
-  height: 3.1827rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
- .div-framer-72rtr7-idc   .group-RCr .app-store-HCS .e-kte {
-  margin-bottom: 0.013rem;
-  width: 2.8427rem;
-  height: 3.2464rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
+ 
  .div-framer-72rtr7-idc   .group-7DQ {
   margin-bottom: 0.2rem;
   width: 37.5rem;
@@ -2413,7 +2210,6 @@ input {
   white-space: nowrap;
 }
 .auto-group-ia8v-jEW {
-  margin-bottom: 4.2rem;
   padding-top: 8.2rem;
   align-items: center;
   display: flex;
@@ -2421,7 +2217,7 @@ input {
 
 }
 .div-hero-esG {
-  margin-bottom: 4rem;
+  margin-bottom: 0rem;
   display: flex;
   height: 106.3rem;
 
@@ -3541,7 +3337,7 @@ input {
   vertical-align: top;
 }
  .div-framer-72rtr7-idc  .div-framer-11v3gxp-hne {
-  padding-top: 15.7rem;
+  padding-top: 10rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -4151,7 +3947,7 @@ input {
  justify-content: center;
 }
  .div-framer-4ke4dr-JGW {
-  padding: 3.95rem 0rem 7.043rem 0rem;
+  padding: 20rem 0rem 7.043rem 0rem;
   width: 100%;
   height: 83.5rem;
   left: 17.3rem;
