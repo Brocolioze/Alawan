@@ -3,8 +3,11 @@ DROP TABLE AnimalColour IF EXISTS;
 DROP TABLE Animal IF EXISTS;
 DROP TABLE Person IF EXISTS;
 DROP TABLE Address IF EXISTS;
+DROP TABLE Collier IF EXISTS;
 DROP TABLE Colour IF EXISTS;
 DROP TABLE Race IF EXISTS;
+
+
 
 CREATE TABLE Race (
 	id int AUTO_INCREMENT,
@@ -16,6 +19,13 @@ CREATE TABLE Color (
 	id int AUTO_INCREMENT,
 	color varchar(16), 
 	PRIMARY KEY (id)
+);
+
+CREATE TABLE Collier(
+	id int AUTO_INCREMENT,
+	idCollier varchar(255),
+	position varchar(255),
+	PRIMARY KEY(id)
 );
 
 CREATE TABLE Address (
@@ -38,25 +48,34 @@ CREATE TABLE Person (
 	invite boolean,
 	admin boolean,
 	creationDate DATE,
-	PRIMARY KEY (id)
+	PRIMARY KEY (id),
+	FOREIGN KEY (idAddress) REFERENCES Address(id)
 );
 
 CREATE TABLE Animal (
 	id int AUTO_INCREMENT,
 	idPerson int,
 	idRace int,
+	idCollier int,
 	name varchar(63),
 	picture varchar(255),
 	birth date,
 	research boolean ,
-	PRIMARY KEY (id)
+	PRIMARY KEY (id),
+	FOREIGN KEY (idPerson) REFERENCES Person(id),
+	FOREIGN KEY (idRace) REFERENCES Race(id),
+	FOREIGN KEY (idCollier) REFERENCES Collier(id)
+	
 );
 
 CREATE TABLE AnimalColor (
 	id int AUTO_INCREMENT,
 	idAnimal int,
 	idColor int,
-	PRIMARY KEY (id)
+	PRIMARY KEY (id),
+	FOREIGN KEY (idAnimal) REFERENCES Animal(id),
+	FOREIGN KEY (idColor) REFERENCES Color(id)
+	
 );
 
 CREATE TABLE Alert (
@@ -67,5 +86,6 @@ CREATE TABLE Alert (
 	place varchar(64) ,
 	description varchar(255),
 	alerteFound boolean,
-	PRIMARY KEY (id)
+	PRIMARY KEY (id),
+	FOREIGN KEY (idAnimal) REFERENCES Animal(id)
 );
