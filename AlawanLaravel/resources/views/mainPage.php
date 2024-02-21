@@ -40,7 +40,7 @@
               </div>
               <p class="alawan-aKg">Alawan </p>
             </div>
-            <p class="votre-compagnon-ultime-pour-retrouver-les-chiens-perdus--Tnn">Votre compagnon ultime pour retrouver les chiens perdus !</p>
+            <p class="votre-compagnon-ultime-pour-retrouver-les-chiens-perdus--Tnn">Votre compagnon ultime pour retrouver <br class="brP"> les chiens perdus !</p>
             <button class="link-framer-k6hho3-7Kc"><img class="image-qWW" src="img/image-Jte.png"/><p class=" telecharger-maintenant-NWS">Telecharger maintenant</p></button>
           </div>
         </div>
@@ -255,7 +255,7 @@
       <div class="div-framer-11v3gxp-hne">
         <div class="group-RCr">
           <img class="bg-Lqc" src="img/bg-RT4.png"/>
-          <img class="noise-sqY" src="img/noise.png"/>
+          
           <img class="icon-pEz" src="img/icon.png"/>
           <div class="download-on-the-keS">
             <img class="d-rSa" src="img/d.png"/>
@@ -286,7 +286,7 @@
         </div>
         <div class="group-7DQ">
           <img class="bg-3sk" src="img/bg.png"/>
-          <img class="noise-orv" src="img/noise-Gyc.png"/>
+          
           <img class="icon-MNe" src="img/icon-dg2.png"/>
           <div class="get-it-on-gfp">
             <img class="g-1TC" src="img/g.png"/>
