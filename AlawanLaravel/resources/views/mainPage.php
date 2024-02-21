@@ -40,7 +40,7 @@
               </div>
               <p class="alawan-aKg">Alawan </p>
             </div>
-            <p class="votre-compagnon-ultime-pour-retrouver-les-chiens-perdus--Tnn">Votre compagnon ultime pour retrouver les chiens perdus !</p>
+            <p class="votre-compagnon-ultime-pour-retrouver-les-chiens-perdus--Tnn">Votre compagnon ultime pour retrouver <br class="brP"> les chiens perdus !</p>
             <button class="link-framer-k6hho3-7Kc"><img class="image-qWW" src="img/image-Jte.png"/><p class=" telecharger-maintenant-NWS">Telecharger maintenant</p></button>
           </div>
         </div>
@@ -254,51 +254,10 @@
       </div>
       <div class="div-framer-11v3gxp-hne">
         <div class="group-RCr">
-          <img class="bg-Lqc" src="img/bg-RT4.png"/>
-          <img class="noise-sqY" src="img/noise.png"/>
-          <img class="icon-pEz" src="img/icon.png"/>
-          <div class="download-on-the-keS">
-            <img class="d-rSa" src="img/d.png"/>
-            <img class="o-z2z" src="img/o.png"/>
-            <img class="w-L6r" src="img/w.png"/>
-            <img class="n-ThG" src="img/n.png"/>
-            <div class="l-c4N">
-            </div>
-            <img class="o-YCv" src="img/o-tzA.png"/>
-            <img class="a-5ie" src="img/a-yBc.png"/>
-            <img class="d-2tn" src="img/d-JJi.png"/>
-            <img class="o-mrN" src="img/o-fiE.png"/>
-            <img class="n-Xae" src="img/n-heN.png"/>
-            <img class="t-GHL" src="img/t.png"/>
-            <img class="h-Cgn" src="img/h.png"/>
-            <img class="e-kCW" src="img/e-oXc.png"/>
-          </div>
-          <div class="app-store-HCS">
-            <img class="a-CaJ" src="img/a.png"/>
-            <img class="p-XsU" src="img/p-N2i.png"/>
-            <img class="p-Gq4" src="img/p.png"/>
-            <img class="s-p5t" src="img/s.png"/>
-            <img class="t-Yna" src="img/t-V5Y.png"/>
-            <img class="o-63Q" src="img/o-b98.png"/>
-            <img class="r-pk6" src="img/r.png"/>
-            <img class="e-kte" src="img/e-KLz.png"/>
-          </div>
+          <img class="bg-Lqc" src="img/app-store.png"/>
         </div>
         <div class="group-7DQ">
-          <img class="bg-3sk" src="img/bg.png"/>
-          <img class="noise-orv" src="img/noise-Gyc.png"/>
-          <img class="icon-MNe" src="img/icon-dg2.png"/>
-          <div class="get-it-on-gfp">
-            <img class="g-1TC" src="img/g.png"/>
-            <img class="e-A5C" src="img/e.png"/>
-            <img class="t-V7U" src="img/t-Cez.png"/>
-            <img class="i-cxn" src="img/i.png"/>
-            <img class="t-Zd8" src="img/t-bBc.png"/>
-            <img class="o-Jai" src="img/o-V9Q.png"/>
-            <img class="n-eea" src="img/n-CL6.png"/>
-          </div>
-          <img class="google-play-bZp" src="img/google-play.png"/>
-        </div>
+          <img class="bg-3sk" src="img/google-play.png"/>
       </div>
     </div>
     <div class="auto-group-cqhy-u4i">

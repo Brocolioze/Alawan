@@ -36,6 +36,7 @@ CREATE TABLE Person (
 	password varchar(127),
 	phone varchar(17),
 	invite boolean,
+	admin boolean,
 	creationDate DATE,
 	PRIMARY KEY (id)
 );
