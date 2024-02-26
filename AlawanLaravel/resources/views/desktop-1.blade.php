@@ -119,7 +119,7 @@
     <br/>
     
     <br/>
-    Designed with ❤️ by AlawanInc.
+    Designed with ❤️ by Alawan Inc.
     </div>
   </div>
 </div>
