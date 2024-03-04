@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PersonController;
 use App\Http\Controllers\AnimalController;
+use App\Http\Resources\PersonRessource;
+use App\Models\Person;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -41,3 +43,7 @@ Route::delete('/color/{id}', [ColorController::class, 'deleteColor']);
 Route::get('/races', [RaceController::class, 'getAllRaces']);
 Route::post('/race', [RaceController::class, 'addRace']);
 Route::delete('/race/{id}', [RaceController::class, 'deleteRace']);
+
+Route::get('/persons', function(){
+        return PersonRessource::collection(Person::all());
+});
