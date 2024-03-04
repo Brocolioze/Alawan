@@ -1,7 +1,10 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Resources\PersonResource;
+use App\Models\Person;
+use App\Http\Controllers\AnimalController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('mainPage');
 });
+
+Route::get('/persons', function(){
+    return PersonResource::collection(Person::all());
+});
+
+//route::get('/animal',[AnimalController::class, 'getAllAnimals']);
+Route::middleware('auth:api')
+        ->get('/animals', [AnimalController::class, 'getAllAnimals']);

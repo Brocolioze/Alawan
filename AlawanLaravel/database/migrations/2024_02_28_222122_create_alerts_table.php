@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('alerts', function (Blueprint $table) {
+        Schema::create('alert', function (Blueprint $table) {
             $table->id();
             $table->foreignId('animal_id')->constrained();
             $table->date('dateLost');
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('alerts');
+        Schema::dropIfExists('alert');
     }
 };

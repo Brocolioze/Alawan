@@ -21,7 +21,7 @@ CREATE TABLE Color (
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE Collier(
+CREATE TABLE Necklace(
 	id int AUTO_INCREMENT,
 	idCollier varchar(255),
 	position varchar(255),
@@ -56,7 +56,7 @@ CREATE TABLE Animal (
 	id int AUTO_INCREMENT,
 	idPerson int,
 	idRace int,
-	idCollier int,
+	idNecklace int,
 	name varchar(63),
 	picture varchar(255),
 	birth date,
