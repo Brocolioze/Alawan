@@ -17,7 +17,7 @@ class PersonController extends Controller
 {
 
 //connexion
-    public function login(Request $request)
+public function login(Request $request)
 {
     $credentials = $request->only('email', 'password');
 
@@ -30,6 +30,7 @@ class PersonController extends Controller
         return response()->json(['message' => 'Invalid credentials'], 401);
     }
 }
+
 //afficher admn 
 public function getAllPersons()
 {
@@ -37,6 +38,7 @@ public function getAllPersons()
 
     return response()->json(['message' => 'Persons found', 'data' => $persons], 200);
 }
+
 //afficher la personne conn
 public function getLoggedInPerson()
 {
