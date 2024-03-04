@@ -12,6 +12,7 @@ use App\Models\Collier;
 use App\Models\Color;
 use App\Models\Person;
 use App\Models\Race;
+use App\Http\Resources\PersonResource;
 
 class PersonController extends Controller
 {
@@ -25,9 +26,9 @@ public function login(Request $request)
         $user = Auth::user();
         $token = $user->createToken('AuthToken')->accessToken;
 
-        return response()->json(['message' => 'Login successful', 'token' => $token], 200);
+        return response()->json([true], 200);
     } else {
-        return response()->json(['message' => 'Invalid credentials'], 401);
+        return response()->json([false], 401);
     }
 }
 

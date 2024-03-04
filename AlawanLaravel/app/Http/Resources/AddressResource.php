@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class AnimalColorRessource extends JsonResource
+class AddressResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,8 +16,10 @@ class AnimalColorRessource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'idAnimal' => $this->idAnimal,
-            'idColor' => $this->idColor,
+            'city' => $this->city,
+            'street' => $this->street,
+            'doorNumber' => $this->doorNumber,
+            'postalCode' => $this->postalCode,
         ];
     }
 }

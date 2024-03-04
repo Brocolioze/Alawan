@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class AnimalRessource extends JsonResource
+class ColorResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,13 +16,7 @@ class AnimalRessource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'idPerson' => $this->idPerson,
-            'idRace' => $this->idRace,
-            'idNecklace' => $this->idNecklace,
-            'name' => $this->name,
-            'picture' => $this->picture,
-            'birth' => $this->birth,
-            'research' => $this->research,
+            'color' =>$this->color,
         ];
     }
 }
