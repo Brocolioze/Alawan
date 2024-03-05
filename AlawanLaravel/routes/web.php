@@ -11,9 +11,9 @@ use App\Models\Animal;
 use App\Http\Resources\AnimalResource;
 use App\Http\Controllers\AnimalController;
 
-use App\Models\Adresse;
-use App\Http\Resources\AdresseResource;
-use App\Http\Controllers\AdresseController;
+use App\Models\Address;
+use App\Http\Resources\AddressResource;
+use App\Http\Controllers\AddressController;
 
 use App\Models\Alert;
 use App\Http\Resources\AlertResource;
@@ -39,26 +39,3 @@ use App\Http\Controllers\RaceController;
 Route::get('/', function () {
     return view('mainPage');
 });
-
-
-//    LOGIN   //////////////////////////////////////////////////////////////////
-
-Route::post('/login', [PersonController::class, 'login']);
-
-
-//   PERSONS   //////////////////////////////////////////////////////////////////
-
-Route::get('/persons', function(){
-    return PersonResource::collection(Person::all());
-});
-
-
-//   ANIMALS   //////////////////////////////////////////////////////////////////
-
-Route::middleware('auth:api')
-        ->get('/animals', [AnimalController::class, 'getAllAnimals']);
-
-
-//   COLORS   //////////////////////////////////////////////////////////////////
-
-Route::get('/colors', [ColorController::class, 'getAllColors']);
