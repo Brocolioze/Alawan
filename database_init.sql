@@ -1,11 +1,11 @@
-DROP TABLE Alert IF EXISTS;
-DROP TABLE AnimalColour IF EXISTS;
-DROP TABLE Animal IF EXISTS;
-DROP TABLE Person IF EXISTS;
-DROP TABLE Address IF EXISTS;
-DROP TABLE Collier IF EXISTS;
-DROP TABLE Colour IF EXISTS;
-DROP TABLE Race IF EXISTS;
+DROP TABLE IF EXISTS Alert ;
+DROP TABLE IF EXISTS AnimalColor ;
+DROP TABLE IF EXISTS Animal ;
+DROP TABLE IF EXISTS Person ;
+DROP TABLE IF EXISTS Address ;
+DROP TABLE IF EXISTS necklace ;
+DROP TABLE IF EXISTS Color ;
+DROP TABLE IF EXISTS Race ;
 
 
 
@@ -64,7 +64,7 @@ CREATE TABLE Animal (
 	PRIMARY KEY (id),
 	FOREIGN KEY (idPerson) REFERENCES Person(id),
 	FOREIGN KEY (idRace) REFERENCES Race(id),
-	FOREIGN KEY (idCollier) REFERENCES Collier(id)
+	FOREIGN KEY (idNecklace) REFERENCES Necklace(id)
 	
 );
 
@@ -113,8 +113,8 @@ VALUES	(1,"Antoine","Lefebvre","antoinelefebvre@hotmail.com","qwerty123456","819
 		(2,"Zak","El Bahodi", "zakelbahodi@homtail.com","qwerty123456","819-999-9999",true,false);
 
 INSERT INTO Animal(idPerson, idRace, idNecklace, name, picture, birth, research)
-VALUES	(1,1,1,"dogo1","image",'2024-01-01'),
-		(2,2,2,"dogo2","image",'2024-02-02');
+VALUES	(1,1,1,"dogo1","image",'2024-01-01',false),
+		(2,2,2,"dogo2","image",'2024-02-02',false);
 
 INSERT INTO AnimalColor(idColor,idAnimal)
 VALUES	(1,1),
