@@ -11,6 +11,7 @@ use App\Models\Collier;
 use App\Models\Color;
 use App\Models\Person;
 use App\Models\Race;
+use App\Http\Resources\ColorResource;
 
 class ColorController extends Controller
 {
@@ -18,9 +19,10 @@ class ColorController extends Controller
     //afficher les color
     public function getAllColors()
     {
-        $colors = Color::all();
+        //$colors = Color::all();
+        //return response()->json(['message' => 'Colors found', 'data' => $colors], 200);
 
-        return response()->json(['message' => 'Colors found', 'data' => $colors], 200);
+        return ColorResource::collection(Color::all());
     }
 
     //ajouter color

@@ -11,7 +11,7 @@ use App\Models\Collier;
 use App\Models\Color;
 use App\Models\Person;
 use App\Models\Race;
-use App\Http\Resources\PersonResource;
+use App\Http\Resources\AnimalResource;
 
 
 
@@ -20,11 +20,9 @@ class AnimalController extends Controller
 {
 
     //afficher les animaux admin 
-            public function getAllAnimals()
+        public function getAllAnimals()
         {
-            //$animals = Animal::all();
-            //return response()->json(['message' => 'Animals found', 'data' => $animals], 200);
-            return PersonResource::collection(Person::all());
+            return AnimalResource::collection(Animal::all());
         }
 
     //afficher les animaux de la personne 

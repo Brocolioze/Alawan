@@ -12,6 +12,7 @@ use App\Models\Collier;
 use App\Models\Color;
 use App\Models\Person;
 use App\Models\Race;
+use App\Http\Resources\PersonResource;
 
 class PersonController extends Controller
 {
@@ -22,13 +23,12 @@ public function login(Request $request)
     $credentials = $request->only('email', 'password');
 
     if (Auth::attempt($credentials)) {
-        $user = Auth::user();
-        $token = $user->createToken('AuthToken')->accessToken;
-
-        return response()->json(['message' => 'Login successful', 'token' => $token], 200);
-    } else {
-        return response()->json(['message' => 'Invalid credentials'], 401);
+        //$user = Auth::user();
+        //$token = $user->createToken('AuthToken')->accessToken;
+        return response()->json("Utilisateur existant : connexion complétée");
     }
+    else
+        return response()->json("Utilisateur inexistant : connexion impossible");
 }
 
 //afficher admn 
