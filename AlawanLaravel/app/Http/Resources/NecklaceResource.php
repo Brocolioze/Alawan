@@ -16,7 +16,7 @@ class NecklaceResource extends JsonResource
     {
         return [
             'id'=> $this->id,
-            'necklace' => $this->id,
+            'idCollier' => $this->idCollier,
             'position' => $this->position
         ];
     }

@@ -48,30 +48,36 @@ Route::post('/login', [PersonController::class, 'login']);
 Route::post('/person', [PersonController::class, 'addPerson']);
 Route::delete('/person/{id}', [PersonController::class, 'deletePerson']);
 
+Route::get('/persons', function(){
+        return PersonResource::collection(Person::all());
+});
+
+/*
 Route::middleware('auth:api')
         ->get('/persons', [PersonController::class, 'getAllPersons']);
 Route::middleware('auth:api')
         ->get('/user', [PersonController::class, 'getLoggedInPerson']);
 Route::middleware('auth:api')
         ->post('/logout', [PersonController::class, 'logout']);
-
+*/
 
 // __ ANIMAL ______________________________________________________________ 
 
 Route::get('/animals', [AnimalController::class, 'getAllAnimals']);
 Route::post('/animal', [AnimalController::class, 'addAnimal']);
 
+/*
 Route::middleware('auth:api')
         ->get('/animals', [AnimalController::class, 'getAllAnimals']);
 Route::middleware('auth:api')
-        ->get('/animals/person', [AnimalController::class, 'getAnimalsOfLoggedInPerson']);
+        ->get('/animals/person', [AnimalController::class, 'getAnimalsOfLoggedInPerson']);        
 Route::middleware('auth:api')
         ->post('/animal', [AnimalController::class, 'addAnimal']);
 Route::middleware('auth:api')
         ->delete('/animal/{id}', [AnimalController::class, 'deleteAnimal']);
 Route::middleware('auth:api')
         ->put('/animal/{id}', [AnimalController::class, 'updateAnimal']);
-
+*/
 
 // __ COLOR _______________________________________________________________
 
@@ -86,10 +92,6 @@ Route::get('/races', [RaceController::class, 'getAllRaces']);
 Route::post('/race', [RaceController::class, 'addRace']);
 Route::delete('/race/{id}', [RaceController::class, 'deleteRace']);
 
-Route::get('/persons', function(){
-        return PersonResource::collection(Person::all());
-});
-
 
 // __ ADDRESS _____________________________________________________________
 
@@ -100,4 +102,10 @@ Route::post('/address', [AddressController::class, 'addAddress']);
 // __ ALERT _______________________________________________________________
 
 Route::get('/alerts', [AlertController::class, 'getAllAlerts']);
-Route::post('/alert', [AlertController::class, 'addAlerts']);
+Route::post('/alert', [AlertController::class, 'addAlert']);
+
+
+// __ NECKLACE ____________________________________________________________
+
+Route::get('/necklaces', [NecklaceController::class, 'getAllNecklaces']);
+Route::post('/necklace', [NecklaceController::class, 'addNecklace']);
