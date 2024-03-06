@@ -61,6 +61,7 @@ Route::middleware('auth:api')
         ->post('/logout', [PersonController::class, 'logout']);
 */
 
+
 // __ ANIMAL ______________________________________________________________ 
 
 Route::get('/animals', [AnimalController::class, 'getAllAnimals']);
@@ -69,6 +70,12 @@ Route::post('/animal', [AnimalController::class, 'addAnimal']);
 /*
 Route::middleware('auth:api')
         ->get('/animals', [AnimalController::class, 'getAllAnimals']);
+
+//CRUD animal
+//Route::middleware('auth:api')->
+Route::get('/animals', [AnimalController::class, 'getAllAnimals']);
+
+
 Route::middleware('auth:api')
         ->get('/animals/person', [AnimalController::class, 'getAnimalsOfLoggedInPerson']);        
 Route::middleware('auth:api')
@@ -77,9 +84,15 @@ Route::middleware('auth:api')
         ->delete('/animal/{id}', [AnimalController::class, 'deleteAnimal']);
 Route::middleware('auth:api')
         ->put('/animal/{id}', [AnimalController::class, 'updateAnimal']);
+
 */
 
 // __ COLOR _______________________________________________________________
+
+
+Route::post('/animalAlertProfil',[AnimalController::class, 'getAnimalAlertProfil']);
+Route::get('/animalAlert',[AnimalController::class, 'getAnimalAlert']);
+//CRD  color
 
 Route::get('/colors', [ColorController::class, 'getAllColors']);
 Route::post('/color', [ColorController::class, 'addColor']);
@@ -91,6 +104,7 @@ Route::delete('/color/{id}', [ColorController::class, 'deleteColor']);
 Route::get('/races', [RaceController::class, 'getAllRaces']);
 Route::post('/race', [RaceController::class, 'addRace']);
 Route::delete('/race/{id}', [RaceController::class, 'deleteRace']);
+
 
 
 // __ ADDRESS _____________________________________________________________
@@ -109,3 +123,11 @@ Route::post('/alert', [AlertController::class, 'addAlert']);
 
 Route::get('/necklaces', [NecklaceController::class, 'getAllNecklaces']);
 Route::post('/necklace', [NecklaceController::class, 'addNecklace']);
+
+Route::get('/persons', function(){
+        return PersonRessource::collection(Person::all());
+});
+
+//CRD Alert
+
+
