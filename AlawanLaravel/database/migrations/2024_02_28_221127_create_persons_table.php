@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    use Illuminate\Support\Facades\Hash;
     /**
      * Run the migrations.
      */
@@ -17,11 +18,12 @@ return new class extends Migration
             $table->String('name');
             $table->String('lastName');
             $table->String('email')->unique();
-            $table->string('password');
+            $table->string('password')->hash();
             $table->String('phone');
             $table->boolean('invite');
             $table->boolean('admin');
             $table->date('creationDate');
+            $table->rememberToken()->nullable();
             $table->timestamps();
         });
     }

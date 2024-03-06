@@ -1047,6 +1047,7 @@
         },
         {
             "name": "laravel/framework",
+
             "version": "v10.46.0",
             "source": {
                 "type": "git",
@@ -1249,6 +1250,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+
             "time": "2024-02-27T16:46:54+00:00"
         },
         {
