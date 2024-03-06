@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use App\Models\Alert;
@@ -34,4 +33,5 @@ class AlertController extends Controller
             return response()->json(['message' => 'Failed to add alert: ' . $e->getMessage()], 500);
         }
     }
+
 }

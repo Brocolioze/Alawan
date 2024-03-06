@@ -13,47 +13,63 @@ use App\Models\Color;
 use App\Models\Person;
 use App\Models\Race;
 use App\Http\Resources\AnimalResource;
+use App\Http\Resources\PersonResource;
+
+use Illuminate\Support\Facades\Log;
 
 
 class AnimalController extends Controller
 {
-    public function getAllAnimals()
+    
+  public function getAllAnimals()
     {
-        return AnimalResource::collection(Animal::all());
+            $animals = Animal::all();
+            foreach($animals as $animal){
+                if($animal->research == 1){
+                    $animal->research = true;
+                }
+                else{
+                    $animal->research = false;
+                }
+            }
+            return response()->json($animals);
+
     }
-
-
+    
     public function getAnimalsOfLoggedInPerson()
     {
         $user = Auth::user();
         if (!$user) {
             return response()->json(['message' => 'User not found'], 404);
-        }
+
+    //afficher les animaux admin 
+          
         $animals = Animal::where('idPerson', $user->id)->get();
         return response()->json(['message' => 'Animals found', 'data' => $animals], 200);
     }
+}
 
 
     public function addAnimal(Request $request)
     {
-        try {
-            $animal = new Animal([
-                'idPerson' => $request->input('idPerson'),
-                'idRace' => $request->input('idRace'),
-                'idCollier' => $request->input('idCollier'),
-                'name' => $request->input('name'),
-                'picture' => $request->input('picture'),
-                'birth' => $request->input('birth'),
-                'research' => $request->input('research')
-            ]);
+            try {
+                $animal = new Animal([
+                    'idPerson' => $request->input('idPerson'),
+                    'idRace' => $request->input('idRace'),
+                    'idNecklace' => $request->input('idCollier'),
+                    'name' => $request->input('name'),
+                    'picture' => $request->input('picture'),
+                    'birth' => $request->input('birth'),
+                    'research' => $request->input('research')
+                ]);
 
-            $animal->save();
+                $animal->save();
 
-            return response()->json(['message' => 'Animal added successfully', 'data' => $animal], 201);
-        }
-        catch (QueryException $e) {
-            return response()->json(['message' => 'Failed to add animal: ' . $e->getMessage()], 500);
-        }
+                return response()->json(['message' => 'Animal added successfully', 'data' => $animal], 201);
+            } catch (QueryException $e) {
+                return response()->json(['message' => 'Failed to add animal: ' . $e->getMessage()], 500);
+            }
+        
     }
 
 
@@ -73,11 +89,14 @@ class AnimalController extends Controller
         }
     }
     
-    public function updateAnimal(Request $request, $id)
-    {
-        try {
-            $animal = Animal::findOrFail($id);
+    
 
+        
+    //modifier un animal 
+        public function updateAnimal(Request $request, $id)
+        {
+            try {
+                $animal = Animal::findOrFail($id);
             $fieldsToUpdate = $request->only(['idPerson', 'idRace', 'idCollier', 'name', 'picture', 'birth', 'research']);
 
             foreach ($fieldsToUpdate as $field => $value) {
@@ -87,7 +106,6 @@ class AnimalController extends Controller
             }
 
             $animal->save();
-
             return response()->json(['message' => 'Animal updated successfully', 'data' => $animal], 200);
         }
         catch (QueryException $e) {
@@ -96,5 +114,60 @@ class AnimalController extends Controller
         catch (\Exception $e) {
             return response()->json(['message' => 'Animal not found'], 404);
         }
-    }
+     }
+
+    // Get les animal du profil qui sont en alerte
+        public function getAnimalAlertProfil(Request $request)
+        {
+            try{
+                $animals = Animal::where('idPerson',$request->id)->get();
+                $animalIds = $animals->pluck('id')->toArray();
+                $alerts = Alert::where('idAnimal',$animalIds)->where('dateFind',NULL)->get();
+                $alertIds = $alerts->pluck('idAnimal')->toArray();
+                $animals = Animal::where('id',$alertIds)->get();
+                foreach($animals as $animal){
+                    if($animal->research == 1){
+                        $animal->research = true;
+                    }
+                    else{
+                        $animal->research = false;
+                    }
+            }
+                return response()->json($animals);
+            }catch (QueryException $e) {
+                return response()->json(['message' => 'Failed to update animal: ' . $e->getMessage()], 500);
+            } catch (\Exception $e) {
+                Log::debug($e);
+                return response()->json(['message' => 'Animal not found'], 404);
+            }
+        }
+
+        public function getAnimalAlert()
+        {
+            try{
+                Log::debug("tu es dedans");
+                $alerts = Alert::where('dateFind',null)->get();
+                $alertsIds = $alerts->pluck('idAnimal')->toArray();
+                $animals = Animal::where('id',$alertsIds)->get(); 
+                Log::debug($animals);
+                foreach($animals as $animal){
+                    if($animal->research == 1){
+                        $animal->research = true;
+                    }
+                    else{
+                        $animal->research = false;
+                    }
+                }
+                return response()->json($animals);
+            }
+            catch (QueryException $e) {
+                Log::debug($e);
+                return response()->json(['message' => 'Failed to update animal: ' . $e->getMessage()], 500);
+            } catch (\Exception $e) {
+                Log::debug($e);
+            return response()->json(['message' => 'Animal not found'], 404);
+        }
+        }
+
 }
+    
