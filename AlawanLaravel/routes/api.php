@@ -47,7 +47,6 @@ Route::post('/enregistrer-rfid', function () {     return response()->file(publi
 Route::post('/login', [PersonController::class, 'login']);
 Route::post('/person', [PersonController::class, 'addPerson']);
 Route::delete('/person/{id}', [PersonController::class, 'deletePerson']);
-
 Route::get('/persons', function(){
         return PersonResource::collection(Person::all());
 });
@@ -117,7 +116,7 @@ Route::post('/address', [AddressController::class, 'addAddress']);
 
 Route::get('/alerts', [AlertController::class, 'getAllAlerts']);
 Route::post('/alert', [AlertController::class, 'addAlert']);
-
+Route::post('/finAlert', [AnimalController::class,'finAlertProfil']);
 
 // __ NECKLACE ____________________________________________________________
 

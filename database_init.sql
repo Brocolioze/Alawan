@@ -82,7 +82,7 @@ CREATE TABLE Alert (
 	id int AUTO_INCREMENT,
 	idAnimal int,
 	dateLost date,
-	dateFind boolean,
+	dateFind date,
 	place varchar(64) ,
 	description varchar(255),
 	alerteFound boolean,

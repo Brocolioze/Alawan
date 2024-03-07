@@ -14,7 +14,7 @@ use App\Models\Person;
 use App\Models\Race;
 use App\Http\Resources\AnimalResource;
 use App\Http\Resources\PersonResource;
-
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
 
 
@@ -124,7 +124,7 @@ class AnimalController extends Controller
                 $animalIds = $animals->pluck('id')->toArray();
                 $alerts = Alert::where('idAnimal',$animalIds)->where('dateFind',NULL)->get();
                 $alertIds = $alerts->pluck('idAnimal')->toArray();
-                $animals = Animal::where('id',$alertIds)->get();
+                $animals = Animal::whereIn('id',$alertIds)->get();
                 foreach($animals as $animal){
                     if($animal->research == 1){
                         $animal->research = true;
@@ -145,11 +145,9 @@ class AnimalController extends Controller
         public function getAnimalAlert()
         {
             try{
-                Log::debug("tu es dedans");
                 $alerts = Alert::where('dateFind',null)->get();
-                $alertsIds = $alerts->pluck('idAnimal')->toArray();
-                $animals = Animal::where('id',$alertsIds)->get(); 
-                Log::debug($animals);
+                $alertIds = $alerts->pluck('idAnimal')->toArray();
+                $animals = Animal::whereIn('id',$alertIds)->get(); 
                 foreach($animals as $animal){
                     if($animal->research == 1){
                         $animal->research = true;
@@ -167,6 +165,26 @@ class AnimalController extends Controller
                 Log::debug($e);
             return response()->json(['message' => 'Animal not found'], 404);
         }
+        }
+
+        public function finAlertProfil(Request $request)
+        {
+            try{
+                Log::debug("tu es dedans");
+                $alert = Alert::where('idAnimal',$request->id)->first();
+                Log::debug($alert);
+                $alert->dateFind = Carbon::now()->format('Y-m-d');
+                Log::debug(Carbon::now()->format('Y-m-d'));
+                $alert->save();
+                return response()->json(true);
+            }
+            catch (QueryException $e) {
+                Log::debug($e);
+                return response()->json(['message' => 'Failed to update animal: ' . $e->getMessage()], 500);
+            } catch (\Exception $e) {
+                Log::debug($e);
+            return response()->json(['message' => 'Animal not found'], 404);
+            }
         }
 
 }
