@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Collier extends Model
+class Necklace extends Model
 {
-    protected $table = 'Collier';
+    protected $table = 'Necklace';
     protected $primaryKey = 'id';
     public $timestamps = false;
 

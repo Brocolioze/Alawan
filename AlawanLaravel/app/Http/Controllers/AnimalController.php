@@ -3,15 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+
 use App\Models\Animal;
-use App\Models\Address;
-use App\Models\Alert;
-use App\Models\AnimalColor;
-use App\Models\Collier;
-use App\Models\Color;
-use App\Models\Person;
-use App\Models\Race;
 use App\Http\Resources\AnimalResource;
 
 
@@ -19,10 +14,13 @@ class AnimalController extends Controller
 {
     public function getAllAnimals()
     {
-        return AnimalResource::collection(Animal::all());
+        $animals = Animal::all();
+
+        return response()->json(['message' => 'Animals found', 'data' => $animals], 200);
     }
 
 
+    /*
     public function getAnimalsOfLoggedInPerson()
     {
         $user = Auth::user();
@@ -32,6 +30,7 @@ class AnimalController extends Controller
         $animals = Animal::where('idPerson', $user->id)->get();
         return response()->json(['message' => 'Animals found', 'data' => $animals], 200);
     }
+    */
 
 
     public function addAnimal(Request $request)
@@ -40,7 +39,7 @@ class AnimalController extends Controller
             $animal = new Animal([
                 'idPerson' => $request->input('idPerson'),
                 'idRace' => $request->input('idRace'),
-                'idCollier' => $request->input('idCollier'),
+                'idNecklace' => $request->input('idNecklace'),
                 'name' => $request->input('name'),
                 'picture' => $request->input('picture'),
                 'birth' => $request->input('birth'),

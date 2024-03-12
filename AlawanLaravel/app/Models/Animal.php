@@ -14,7 +14,7 @@ class Animal extends Model
     protected $fillable = [
         'idPerson',
         'idRace',
-        'idCollier',
+        'idNecklace',
         'name',
         'picture',
         'birth',
@@ -33,6 +33,6 @@ class Animal extends Model
 
     public function collier()
     {
-        return $this->belongsTo('App\Models\Collier', 'idCollier');
+        return $this->belongsTo('App\Models\Necklace', 'idNecklace');
     }
 }

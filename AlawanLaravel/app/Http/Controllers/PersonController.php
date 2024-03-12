@@ -16,8 +16,9 @@ class PersonController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            //$user = Auth::user();
-            //$token = $user->createToken('AuthToken')->accessToken;
+            $user = Auth::user();
+            $token = $user->createToken('AuthToken')->accessToken;
+            
             return response()->json("Utilisateur existant : connexion complétée");
         }
         else

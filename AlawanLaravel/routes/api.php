@@ -50,17 +50,22 @@ Route::middleware('auth:api')->get('/persons', [PersonController::class, 'getAll
 Route::middleware('auth:api')->get('/user', [PersonController::class, 'getLoggedInPerson']);
 Route::middleware('auth:api')->post('/logout', [PersonController::class, 'logout']);
 
+Route::get('/persons', function(){ return PersonResource::collection(Person::all()); });
+
 
 // __ ANIMAL ______________________________________________________________ 
 
 Route::get('/animals', [AnimalController::class, 'getAllAnimals']);
 Route::post('/animal', [AnimalController::class, 'addAnimal']);
+Route::delete('/animal/{id}', [AnimalController::class, 'deleteAnimal']);
 
+/*
 Route::middleware('auth:api')->get('/animals', [AnimalController::class, 'getAllAnimals']);
 Route::middleware('auth:api')->get('/animals/person', [AnimalController::class, 'getAnimalsOfLoggedInPerson']);
 Route::middleware('auth:api')->post('/animal', [AnimalController::class, 'addAnimal']);
 Route::middleware('auth:api')->delete('/animal/{id}', [AnimalController::class, 'deleteAnimal']);
 Route::middleware('auth:api')->put('/animal/{id}', [AnimalController::class, 'updateAnimal']);
+*/
 
 
 // __ COLOR _______________________________________________________________
@@ -75,8 +80,6 @@ Route::delete('/color/{id}', [ColorController::class, 'deleteColor']);
 Route::get('/races', [RaceController::class, 'getAllRaces']);
 Route::post('/race', [RaceController::class, 'addRace']);
 Route::delete('/race/{id}', [RaceController::class, 'deleteRace']);
-
-Route::get('/persons', function(){ return PersonResource::collection(Person::all()); });
 
 
 // __ ADDRESS _____________________________________________________________
