@@ -2,15 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
-use App\Models\Animal;
-use App\Models\Address;
-use App\Models\Alert;
-use App\Models\AnimalColor;
-use App\Models\Collier;
+
 use App\Models\Color;
-use App\Models\Person;
-use App\Models\Race;
 use App\Http\Resources\ColorResource;
 
 class ColorController extends Controller

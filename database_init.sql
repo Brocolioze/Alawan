@@ -7,8 +7,6 @@ DROP TABLE IF EXISTS necklace ;
 DROP TABLE IF EXISTS Color ;
 DROP TABLE IF EXISTS Race ;
 
-
-
 CREATE TABLE Race (
 	id int AUTO_INCREMENT,
 	race varchar(20), 
