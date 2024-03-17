@@ -6,9 +6,10 @@ use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-
+use Carbon\Carbon;
 use App\Models\Person;
 use App\Http\Resources\PersonResource;
+use Illuminate\Support\Facades\Hash;
 
 class PersonController extends Controller
 {
@@ -49,7 +50,6 @@ class PersonController extends Controller
 
     public function addPerson(Request $request)
     {
-        Log::debug("test");
         try
         {
             $person = new Person([
@@ -57,16 +57,16 @@ class PersonController extends Controller
                 'name' => $request->input('name'),
                 'lastName' => $request->input('lastName'),
                 'email' => $request->input('email'),
-                'password' => $request->input('password'),
+                'password' => Hash::make($request->input('password')),
                 'phone' => $request->input('phone'),
-                'invite' => false,
-                'admin' => false,
-                'creationDate' => $request->input('creationDate')
+                'invite' => 0,
+                'admin' => 0,
+                'creationDate' => Carbon::now()->format('Y-m-d'),
             ]);
-            Log::debug($person);
+
             $person->save();
-            Log::debug("person saved");
-            return response()->json(['message' => 'Person added successfully', 'data' => $person], 201);
+
+            return response()->json(true);
         }
         catch (QueryException $e){
             return response()->json(['message' => 'Failed to add person: ' . $e->getMessage()], 500);
