@@ -8,22 +8,31 @@ use Illuminate\Http\Request;
 
 use App\Models\Person;
 use App\Http\Resources\PersonResource;
-
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Hash;
 
 class PersonController extends Controller
 {
     public function login(Request $request)
     {
-        $credentials = $request->only('email', 'password');
-
-        if (Auth::attempt($credentials)) {
+        Log::debug(Hash::make($request->password));
+        Log::debug($request->password);
+        //$credentials = $request->only('email', 'password');
+        //Log::debug($credentials);
+        Log::debug(Auth::attempt(['email' => $request->email, 'password' => $request->password]));
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            Log::debug("tu te connectes");
             $user = Auth::user();
-            $token = $user->createToken('AuthToken')->accessToken;
-            
-            return response()->json("Utilisateur existant : connexion complétée");
+            Log::debug( $user);
+            //$token = $user->createToken('AuthToken')->accessToken;
+            return response()->json(true);
         }
-        else
-            return response()->json("Utilisateur inexistant : connexion impossible");
+        else{
+            Log::debug("pas bon");
+            return response()->json(false);
+        }
+
+            
     }
 
 
@@ -94,6 +103,20 @@ class PersonController extends Controller
         }
         catch (\Exception $e) {
             return response()->json(['message' => 'Person not found'], 404);
+        }
+    }
+
+    public function getAuth(){
+        try{
+            Log::debug("tu es dedans");
+            $user = Auth::user();
+            Log::debug("L'usager connecter");
+            Log::debug($user);
+            return($user->id);
+        }
+        catch(\Exception $e){
+            Log::debug($e);
+            return(0);
         }
     }
 }

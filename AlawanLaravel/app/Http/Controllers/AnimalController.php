@@ -7,19 +7,30 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 use App\Models\Animal;
+use App\Models\Alert;
 use App\Http\Resources\AnimalResource;
 use App\Http\Resources\PersonResource;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
 
 
+
 class AnimalController extends Controller
 {
     public function getAllAnimals()
     {
+        Log::debug("dedans");
         $animals = Animal::all();
-
-        return response()->json(['message' => 'Animals found', 'data' => $animals], 200);
+        foreach($animals as $animal){
+            if($animal->research == 1){
+                $animal->research = true;
+            }
+            else{
+                $animal->research = false;
+            }
+        }
+        Log::debug($animals);
+        return response()->json($animals);
     }
 
     /*
