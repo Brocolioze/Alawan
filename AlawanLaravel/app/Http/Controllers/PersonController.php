@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 use App\Models\Person;
 use App\Http\Resources\PersonResource;
@@ -49,7 +50,9 @@ class PersonController extends Controller
 
     public function addPerson(Request $request)
     {
-        try {
+        Log::debug("test");
+        try
+        {
             $person = new Person([
                 'idAddress' => $request->input('idAddress'),
                 'name' => $request->input('name'),
@@ -57,16 +60,16 @@ class PersonController extends Controller
                 'email' => $request->input('email'),
                 'password' => $request->input('password'),
                 'phone' => $request->input('phone'),
-                'invite' => $request->input('invite'),
-                'admin' => $request->input('admin'),
+                'invite' => false,
+                'admin' => false,
                 'creationDate' => $request->input('creationDate')
             ]);
-
+            Log::debug($person);
             $person->save();
-
+            Log::debug("person saved");
             return response()->json(['message' => 'Person added successfully', 'data' => $person], 201);
         }
-        catch (QueryException $e) {
+        catch (QueryException $e){
             return response()->json(['message' => 'Failed to add person: ' . $e->getMessage()], 500);
         }
     }
@@ -94,6 +97,18 @@ class PersonController extends Controller
         }
         catch (\Exception $e) {
             return response()->json(['message' => 'Person not found'], 404);
+        }
+    }
+
+    public function verifyEmail($email)
+    {
+        try {
+            $mail = Person::findOrFail($email);
+
+            return response()->json(['message' => 'This email is already in use'], 200);
+        }
+        catch (\Exception $e) {
+            return response()->json(['message' => 'Email not found'], 404);
         }
     }
 }
