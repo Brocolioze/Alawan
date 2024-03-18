@@ -13,7 +13,7 @@ CREATE TABLE Color (
 
 CREATE TABLE Necklace(
 	id int AUTO_INCREMENT,
-	idCollier varchar(255),
+	idNecklace varchar(255),
 	position varchar(255),
 	PRIMARY KEY(id)
 );
@@ -79,3 +79,40 @@ CREATE TABLE Alert (
 	PRIMARY KEY (id),
 	FOREIGN KEY (idAnimal) REFERENCES Animal(id)
 );
+
+INSERT INTO Address(city,street,doorNumber,postalCode)
+VALUES("Trois-rivières","courteau",1000,"G6x0x1"),
+      ("Pointe du lac", "meu-meu", 2000,"G4j3a1");
+ 
+INSERT INTO Color(color)
+VALUES ("noir"),
+       ("blanc"),
+       ("roux");
+ 
+INSERT INTO Race(race)
+VALUES ("berger allemand"),
+       ("caniche"),
+       ("caniche royale");
+ 
+INSERT INTO Necklace(idNecklace)
+VALUES 	("ABC123"),
+       	("CBA321"),
+	 	("XXX000");
+ 
+INSERT INTO Person(idAddress, name, lastName, email, password, phone, admin, invite)
+VALUES  (1, "Antoine", "Lefebvre", "antoinelefebvre@hotmail.com", "qwerty123456", "819-999-9999", false, false),
+        (2, "Zak", "El Bahodi", "zakelbahodi@homtail.com", "qwerty123456", "819-999-9999",true, false),
+	(1, "Alexandre", "Carle", "alex.carle@hotmail.com", "pipopipo6464", "819-668-7152", false, false);
+ 
+INSERT INTO Animal(idPerson, idRace, idNecklace, name, picture, birth, research)
+VALUES  	(1,1,1,"dogo1","image",'2024-01-01',false),
+        	(2,2,2,"dogo2","image",'2024-02-02',false),
+	   	(3,3,3,"dogo3","image",'2000-01-01',false);
+ 
+INSERT INTO AnimalColor(idColor,idAnimal)
+VALUES  (1,1),
+        (2,2),
+        (3,3);
+ 
+INSERT INTO Alert(idAnimal,dateLost,description,alerteFound)
+VALUES (1,'2024-01-01',"mon chien que j'adore est perdu j'ai besoin d'aide vite!",false);
