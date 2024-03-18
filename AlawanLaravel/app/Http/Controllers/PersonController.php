@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Log;
 use Carbon\Carbon;
 use App\Models\Person;
 use App\Http\Resources\PersonResource;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
 
 
@@ -109,7 +108,6 @@ class PersonController extends Controller
         }
     }
 
-
     public function getAuth(){
         try{
             Log::debug("tu es dedans");
@@ -121,6 +119,9 @@ class PersonController extends Controller
         catch(\Exception $e){
             Log::debug($e);
             return(0);
+
+        }
+    }
 
     public function verifyEmail($email)
     {
