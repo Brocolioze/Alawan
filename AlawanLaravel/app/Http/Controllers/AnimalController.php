@@ -33,20 +33,34 @@ class AnimalController extends Controller
         return response()->json($animals);
     }
 
-    /*
+    
     public function getAnimalsOfLoggedInPerson()
     {
-        $user = Auth::user();
-        if (!$user) {
-            return response()->json(['message' => 'User not found'], 404);
-
-    //afficher les animaux admin 
-          
-        $animals = Animal::where('idPerson', $user->id)->get();
-        return response()->json(['message' => 'Animals found', 'data' => $animals], 200);
+        try{
+            $animals = Animal::where('idPerson', $user->id)->get();
+            if($animals != null){
+                foreach($animals as $animal){
+                    if($animal->research == 1){
+                        $animal->research = true;
+                    }
+                    else{
+                        $animal->research = false;
+                    }
+                }
+            }
+            return response()->json($animals);
+        }
+        catch (QueryException $e) {
+            Log::debug($e);
+            return response()->json();
+        }
+        catch (\Exception $e) {
+            Log::debug($e);
+            return response()->json();
+        }
+            
+        
     }
-    */
-
 
     public function addAnimal(Request $request)
     {

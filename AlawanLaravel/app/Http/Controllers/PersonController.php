@@ -26,11 +26,11 @@ class PersonController extends Controller
             $user = Auth::user();
             Log::debug( $user);
             //$token = $user->createToken('AuthToken')->accessToken;
-            return response()->json(true);
+            return response()->json($user->id);
         }
         else{
             Log::debug("pas bon");
-            return response()->json(false);
+            return response()->json(0);
         }
 
             
@@ -108,7 +108,7 @@ class PersonController extends Controller
         }
     }
 
-    public function getAuth(){
+    public function getIdAuth(){
         try{
             Log::debug("tu es dedans");
             $user = Auth::user();
