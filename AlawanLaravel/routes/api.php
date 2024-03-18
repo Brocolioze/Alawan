@@ -46,15 +46,17 @@ Route::post('/login', [PersonController::class, 'login']);
 Route::post('/person', [PersonController::class, 'addPerson']);
 Route::delete('/person/{id}', [PersonController::class, 'deletePerson']);
 Route::get('/persons', function(){ return PersonResource::collection(Person::all()); });
-
+Route::get('/getIdAuth', [PersonController::class, 'getIdAuth']);
 Route::middleware('auth:api')->get('/persons', [PersonController::class, 'getAllPersons']);
 Route::middleware('auth:api')->get('/user', [PersonController::class, 'getLoggedInPerson']);
 Route::middleware('auth:api')->post('/logout', [PersonController::class, 'logout']);
 
 
+
 // __ EMAIL ______________________________________________________________ 
 
 Route::get('/emails', [PersonController::class, 'getAllEmails']);
+
 
 
 // __ ANIMAL ______________________________________________________________ 
