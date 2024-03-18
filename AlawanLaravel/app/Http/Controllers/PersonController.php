@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Log;
+use Carbon\Carbon;
 use App\Models\Person;
 use App\Http\Resources\PersonResource;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
+
 
 class PersonController extends Controller
 {
@@ -58,24 +60,25 @@ class PersonController extends Controller
 
     public function addPerson(Request $request)
     {
-        try {
+        try
+        {
             $person = new Person([
                 'idAddress' => $request->input('idAddress'),
                 'name' => $request->input('name'),
                 'lastName' => $request->input('lastName'),
                 'email' => $request->input('email'),
-                'password' => $request->input('password'),
+                'password' => Hash::make($request->input('password')),
                 'phone' => $request->input('phone'),
-                'invite' => $request->input('invite'),
-                'admin' => $request->input('admin'),
-                'creationDate' => $request->input('creationDate')
+                'invite' => 0,
+                'admin' => 0,
+                'creationDate' => Carbon::now()->format('Y-m-d'),
             ]);
 
             $person->save();
 
-            return response()->json(['message' => 'Person added successfully', 'data' => $person], 201);
+            return response()->json(true);
         }
-        catch (QueryException $e) {
+        catch (QueryException $e){
             return response()->json(['message' => 'Failed to add person: ' . $e->getMessage()], 500);
         }
     }
@@ -106,6 +109,7 @@ class PersonController extends Controller
         }
     }
 
+
     public function getAuth(){
         try{
             Log::debug("tu es dedans");
@@ -117,6 +121,17 @@ class PersonController extends Controller
         catch(\Exception $e){
             Log::debug($e);
             return(0);
+
+    public function verifyEmail($email)
+    {
+        try {
+            $mail = Person::findOrFail($email);
+
+            return response()->json(['message' => 'This email is already in use'], 200);
+        }
+        catch (\Exception $e) {
+            return response()->json(['message' => 'Email not found'], 404);
+
         }
     }
 }

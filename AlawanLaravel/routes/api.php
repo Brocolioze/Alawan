@@ -53,6 +53,12 @@ Route::middleware('auth:api')->post('/logout', [PersonController::class, 'logout
 
 
 
+// __ EMAIL ______________________________________________________________ 
+
+Route::get('/emails', [PersonController::class, 'getAllEmails']);
+
+
+
 // __ ANIMAL ______________________________________________________________ 
 
 Route::get('/animals', [AnimalController::class, 'getAllAnimals']);
