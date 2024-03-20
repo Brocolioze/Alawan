@@ -21,19 +21,19 @@ class PersonController extends Controller
         //$credentials = $request->only('email', 'password');
         //Log::debug($credentials);
         Log::debug(Auth::attempt(['email' => $request->email, 'password' => $request->password]));
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password]))
+        {
             Log::debug("tu te connectes");
             $user = Auth::user();
             Log::debug( $user);
             //$token = $user->createToken('AuthToken')->accessToken;
             return response()->json(true);
         }
-        else{
+        else
+        {
             Log::debug("pas bon");
             return response()->json(false);
         }
-
-            
     }
 
 
@@ -55,7 +55,6 @@ class PersonController extends Controller
         else
             return response()->json(['message' => 'User found', 'data' => $user], 200);
     }
-
 
     public function addPerson(Request $request)
     {
@@ -82,7 +81,6 @@ class PersonController extends Controller
         }
     }
 
-
     public function logout(Request $request)
     {
         $user = Auth::user();
@@ -90,7 +88,6 @@ class PersonController extends Controller
 
         return response()->json(['message' => 'Logout successful'], 200);
     }
-
 
     public function deletePerson($id)
     {
