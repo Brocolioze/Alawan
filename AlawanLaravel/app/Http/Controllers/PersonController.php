@@ -18,16 +18,17 @@ class PersonController extends Controller
 {
     public function login(Request $request)
     {
+
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+
             $user = Auth::user();
             return response()->json($user->id);
         }
-        else{
+        else
+        {
             Log::debug("pas bon");
             return response()->json(0);
         }
-
-            
     }
 
 
@@ -49,7 +50,6 @@ class PersonController extends Controller
         else
             return response()->json(['message' => 'User found', 'data' => $user], 200);
     }
-
 
     public function addPerson(Request $request)
     {
@@ -77,7 +77,6 @@ class PersonController extends Controller
         }
     }
 
-
     public function logout(Request $request)
     {
         $user = Auth::user();
@@ -85,7 +84,6 @@ class PersonController extends Controller
 
         return response()->json(['message' => 'Logout successful'], 200);
     }
-
 
     public function deletePerson($id)
     {
