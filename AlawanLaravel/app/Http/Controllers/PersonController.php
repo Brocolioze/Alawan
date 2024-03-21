@@ -72,12 +72,13 @@ class PersonController extends Controller
                 'admin' => 0,
                 'creationDate' => Carbon::now()->format('Y-m-d'),
             ]);
-
+            Log::debug(json($person));
             $person->save();
 
             return response()->json(true);
         }
         catch (QueryException $e){
+            Log::debug($e);
             return response()->json(['message' => 'Failed to add person: ' . $e->getMessage()], 500);
         }
     }
