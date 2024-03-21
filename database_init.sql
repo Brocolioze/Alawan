@@ -108,9 +108,13 @@ VALUES 	("ABC123"),
 	 	("XXX000");
  
 INSERT INTO Person(idAddress, name, lastName, email, password, phone, admin, invite)
-VALUES  (1, "Antoine", "Lefebvre", "antoinelefebvre@hotmail.com", "$2y$12$P1spiC5wcubjcVE3pKOnQuSkDEuCZTU5tGX.7bylRXBlctSmrku2G  ", "819-999-9999", false, false),
-        (2, "Zak", "El Bahodi", "zakelbahodi@homtail.com", "$2y$12$P1spiC5wcubjcVE3pKOnQuSkDEuCZTU5tGX.7bylRXBlctSmrku2G  ", "819-999-9999",true, false),
-	(1, "Alexandre", "Carle", "alex.carle@hotmail.com", "$2y$12$P1spiC5wcubjcVE3pKOnQuSkDEuCZTU5tGX.7bylRXBlctSmrku2G  ", "819-668-7152", false, false);
+VALUES  (1, "Antoine", "Lefebvre", "antoinelefebvre@hotmail.com", "qwerty123456", "819-999-9999", false, false),
+        (2, "Zak", "El Bahodi", "zakelbahodi@homtail.com", "qwerty123456", "819-999-9999",true, false),
+		    (1, "Alexandre", "Carle", "alex.carle@hotmail.com", "pipopipo6464", "819-668-7152", false, false);
+		
+INSERT INTO Person(idAddress, name, lastName, invite)
+VALUES  (2, "Invite", "Alawan", 1);
+
  
 INSERT INTO Animal(idPerson, idRace, idNecklace, name, picture, birth, research)
 VALUES  	(1,1,1,"dogo1","image",'2024-01-01',false),
