@@ -10,23 +10,18 @@ use Carbon\Carbon;
 use App\Models\Person;
 use App\Http\Resources\PersonResource;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Animal;
+use App\Models\Alert;
 
 
 class PersonController extends Controller
 {
     public function login(Request $request)
     {
-        Log::debug(Hash::make($request->password));
-        Log::debug($request->password);
-        //$credentials = $request->only('email', 'password');
-        //Log::debug($credentials);
-        Log::debug(Auth::attempt(['email' => $request->email, 'password' => $request->password]));
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password]))
-        {
-            Log::debug("tu te connectes");
+
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+
             $user = Auth::user();
-            Log::debug( $user);
-            //$token = $user->createToken('AuthToken')->accessToken;
             return response()->json($user->id);
         }
         else
@@ -117,7 +112,10 @@ class PersonController extends Controller
         catch(\Exception $e){
             Log::debug($e);
             return(0);
-
+        }
+        catch (QueryException $e) {
+            Log::debug($e);
+            return response()->json(['message' => 'Failed to delete person: ' . $e->getMessage()], 500);
         }
     }
 
@@ -130,7 +128,37 @@ class PersonController extends Controller
         }
         catch (\Exception $e) {
             return response()->json(['message' => 'Email not found'], 404);
+        }
+        catch (QueryException $e) {
+            Log::debug($e);
+            return response()->json(['message' => 'Failed to delete person: '], 500);
+        }
+    }
 
+    public function getMaster(Request $request){
+        try{
+            $animal = Animal::findOrFail($request->id);
+            $person = Person::findOrFail($animal->idPerson);
+            if($person->invite == 1){
+                $person->invite = true;
+            }
+            else{
+                $person->invite = false;
+            }
+            if($person->admin == 1){
+                $person->admin = true;
+            }
+            else{
+                $person->admin = false;
+            }
+            return response()->json($person);
+        }
+        catch (\Exception $e) {
+            return response()->json(['message' => 'Email not found'], 404);
+        }
+        catch (QueryException $e) {
+            Log::debug($e);
+            return response()->json(['message' => 'Failed to delete person: '], 500);
         }
     }
 }

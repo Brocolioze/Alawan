@@ -51,4 +51,17 @@ class RaceController extends Controller
             return response()->json(['message' => 'Race not found'], 404);
         }
     }
+
+    public function getRaceAnimal(Request $request){
+        try{
+            $race = Race::findOrFail($request->id);
+            return response()->json($race);
+        }
+            catch (QueryException $e) {
+            return response()->json(['message' => 'Failed to delete race: ' . $e->getMessage()], 500);
+        }
+            catch (\Exception $e) {
+            return response()->json(['message' => 'Race not found'], 404);
+        }
+    }
 }

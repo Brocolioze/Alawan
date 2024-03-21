@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Alert;
 use App\Http\Resources\AlertResource;
+use Illuminate\Support\Facades\Log;
 
 class AlertController extends Controller
 {
@@ -53,6 +54,27 @@ class AlertController extends Controller
             return response()->json(['message' => 'Failed to delete alert: ' . $e->getMessage()], 500);
         }
         catch (\Exception $e) {
+            return response()->json(['message' => 'Alert not found'], 404);
+        }
+    }
+
+    public function getAlert(Request $request){
+        try{
+            $alert = Alert::where('idAnimal',$request->id)->where('dateFind',NULL)->first();
+            if($alert->alerteFound == 1){
+                $alert->alerteFound = true;
+            }
+            else{
+                $alert->alerteFound = false;
+            }
+            return response()->json($alert);
+        }
+        catch (QueryException $e) {
+            Log::debug($e);
+            return response()->json(['message' => 'Failed to delete alert: ' . $e->getMessage()], 500);
+        }
+        catch (\Exception $e) {
+            Log::debug($e);
             return response()->json(['message' => 'Alert not found'], 404);
         }
     }
