@@ -27,12 +27,12 @@ class PersonController extends Controller
             $user = Auth::user();
             Log::debug( $user);
             //$token = $user->createToken('AuthToken')->accessToken;
-            return response()->json(true);
+            return response()->json($user->id);
         }
         else
         {
             Log::debug("pas bon");
-            return response()->json(false);
+            return response()->json(0);
         }
     }
 
@@ -71,12 +71,13 @@ class PersonController extends Controller
                 'admin' => 0,
                 'creationDate' => Carbon::now()->format('Y-m-d'),
             ]);
-
+            Log::debug(response()->json($person));
             $person->save();
 
             return response()->json(true);
         }
         catch (QueryException $e){
+            Log::debug($e);
             return response()->json(['message' => 'Failed to add person: ' . $e->getMessage()], 500);
         }
     }
@@ -105,7 +106,7 @@ class PersonController extends Controller
         }
     }
 
-    public function getAuth(){
+    public function getIdAuth(){
         try{
             Log::debug("tu es dedans");
             $user = Auth::user();

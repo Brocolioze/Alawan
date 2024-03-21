@@ -64,10 +64,10 @@ Route::get('/emails', [PersonController::class, 'getAllEmails']);
 Route::get('/animals', [AnimalController::class, 'getAllAnimals']);
 Route::post('/animal', [AnimalController::class, 'addAnimal']);
 Route::delete('/animal/{id}', [AnimalController::class, 'deleteAnimal']);
-
+Route::middleware('auth:api')->get('/animals/person', [AnimalController::class, 'getAnimalsOfLoggedInPerson']);
 /*
 Route::middleware('auth:api')->get('/animals', [AnimalController::class, 'getAllAnimals']);
-Route::middleware('auth:api')->get('/animals/person', [AnimalController::class, 'getAnimalsOfLoggedInPerson']);
+
 Route::middleware('auth:api')->post('/animal', [AnimalController::class, 'addAnimal']);
 Route::middleware('auth:api')->delete('/animal/{id}', [AnimalController::class, 'deleteAnimal']);
 Route::middleware('auth:api')->put('/animal/{id}', [AnimalController::class, 'updateAnimal']);
