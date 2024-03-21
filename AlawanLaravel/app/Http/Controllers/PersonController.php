@@ -72,7 +72,7 @@ class PersonController extends Controller
                 'admin' => 0,
                 'creationDate' => Carbon::now()->format('Y-m-d'),
             ]);
-            Log::debug(json($person));
+            Log::debug(response()->json($person));
             $person->save();
 
             return response()->json(true);
