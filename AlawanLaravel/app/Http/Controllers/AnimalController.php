@@ -7,7 +7,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 use App\Models\Animal;
+use App\Models\AnimalColor;
 use App\Models\Alert;
+use App\Models\Person;
 use App\Http\Resources\AnimalResource;
 use App\Http\Resources\PersonResource;
 use Carbon\Carbon;
@@ -19,7 +21,6 @@ class AnimalController extends Controller
 {
     public function getAllAnimals()
     {
-        Log::debug("dedans");
         $animals = Animal::all();
         foreach($animals as $animal){
             if($animal->research == 1){
@@ -29,14 +30,14 @@ class AnimalController extends Controller
                 $animal->research = false;
             }
         }
-        Log::debug($animals);
         return response()->json($animals);
     }
 
     
-    public function getAnimalsOfLoggedInPerson()
+    public function getAnimalsOfLoggedInPerson(Request $request)
     {
         try{
+            $user = Person::findOrFail($request->id);
             $animals = Animal::where('idPerson', $user->id)->get();
             if($animals != null){
                 foreach($animals as $animal){
@@ -89,15 +90,32 @@ class AnimalController extends Controller
     {
         try {
             $animal = Animal::findOrFail($id);
+            $animalColors = AnimalColor::where('idAnimal',$animal->id)->get();
+            $alerts = Alert::where('idAnimal',$animal->id)->get();
+            if($alerts != null){
+                foreach($alerts as $alert){
+                    $alert->delete();
+                }
+            } 
+            if($animalColors != null){
+                foreach($animalColors as $animalColor){
+                    $animalColor->delete();
+                }
+            }
             $animal->delete();
-
-            return response()->json(['message' => 'Animal deleted successfully'], 200);
+            return response()->json(true);
         }
         catch (QueryException $e) {
-            return response()->json(['message' => 'Failed to delete animal: ' . $e->getMessage()], 500);
+            Log::debug($e);
+            return response()->json(false);
         }
         catch (\Exception $e) {
-            return response()->json(['message' => 'Animal not found'], 404);
+            Log::debug($e);
+            return response()->json(false);
+        }
+        catch(\Throwable $e){
+            Log::debug($e);
+            return response()->json(false);
         }
     }
     
@@ -186,11 +204,8 @@ class AnimalController extends Controller
     public function finAlertProfil(Request $request)
     {
         try{
-            Log::debug("tu es dedans");
             $alert = Alert::where('idAnimal',$request->id)->first();
-            Log::debug($alert);
             $alert->dateFind = Carbon::now()->format('Y-m-d');
-            Log::debug(Carbon::now()->format('Y-m-d'));
             $alert->save();
             return response()->json(true);
         }
@@ -203,5 +218,25 @@ class AnimalController extends Controller
         }
     }
 
+
+    public function findAnimalfromAlert(Request $request){
+        try{
+            $animal = Animal::findOrFail($request->id);
+            if($animal->research == 1){
+                $animal->research = true;
+            }
+            else{
+                $animal->research = false;
+            }
+            return response()->json($animal);
+        }
+        catch (QueryException $e) {
+            Log::debug($e);
+            return response()->json(['message' => 'Failed to get animal: ' . $e->getMessage()], 500);
+        } catch (\Exception $e) {
+            Log::debug($e);
+        return response()->json(['message' => 'Animal not found'], 404);
+        }
+    }
 }
     
