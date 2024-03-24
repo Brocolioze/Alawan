@@ -93,14 +93,50 @@ VALUES("Trois-rivières","courteau",1000,"G6x0x1"),
       ("Pointe du lac", "meu-meu", 2000,"G4j3a1");
  
 INSERT INTO Color(color)
-VALUES ("noir"),
-       ("blanc"),
-       ("roux");
+VALUES 	("Blanc"),
+		("Beige"),
+		("Crème"),
+		("Doré"),
+		("Feu"),
+		("Gris"),
+		("Marro"),
+		("Noir"),
+		("Roux"),
+		("Sable"),
+		("Autre");
  
 INSERT INTO Race(race)
-VALUES ("berger allemand"),
-       ("caniche"),
-       ("caniche royale");
+VALUES ("Beagle"),
+       ("Berger allemand (German Shepherd)"),
+       ("Bichon frisé"),
+	   ("Bouledogue français (French Bulldog)"),
+	   ("Boxer"),
+	   ("Caniche (Poodle)"),
+	   ("Cavalier King Charles Spaniel"),
+	   ("Chihuahua"),
+	   ("Cocker Spaniel (American Cocker Spaniel ou English Cocker Spaniel)"),
+	   ("Dalmatien"),
+	   ("Doberman"),
+	   ("Golden Retriever"),
+	   ("Husky Sibérien (Siberian Husky)"),
+	   ("Labrador Retriever"),
+	   ("Malinois (Malinois Shepherd)"),
+	   ("Maltipoo"),
+	   ("Papillon"),
+	   ("Pitbull Terrier"),
+	   ("Pomeranian"),
+	   ("Pug (Carlin)"),
+	   ("Rottweiler"),
+	   ("Saint-Bernard (Saint Bernard)"),
+	   ("Samoyède (Samoyed)"),
+	   ("Schnauzer"),
+	   ("Setter Irlandais (Irish Setter)"),
+	   ("Shiba Inu"),
+	   ("Shih Tzu"),
+	   ("Teckel (Dachshund)"),
+	   ("Terrier Jack Russell (Jack Russell Terrier)"),
+	   ("Yorkshire Terrier"),
+	   ("Autre");
  
 INSERT INTO Necklace(idNecklace)
 VALUES 	("ABC123"),
@@ -114,8 +150,8 @@ VALUES  (1, "Antoine", "Lefebvre", "antoinelefebvre@hotmail.com", "$2y$12$P1spiC
 	(1, "Alexandre", "Carle", "alex.carle@hotmail.com", "$2y$12$P1spiC5wcubjcVE3pKOnQuSkDEuCZTU5tGX.7bylRXBlctSmrku2G", "819-668-7152", false, false);
 
 		
-INSERT INTO Person(idAddress, name, lastName, invite)
-VALUES  (2, "Invite", "Alawan", 1);
+INSERT INTO Person(name, lastName, invite)
+VALUES  ("Invité", "Alawan", 1);
 
 
  

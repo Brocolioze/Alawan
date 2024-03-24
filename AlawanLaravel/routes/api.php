@@ -77,6 +77,7 @@ Route::middleware('auth:api')->put('/animal/{id}', [AnimalController::class, 'up
 // __ COLOR _______________________________________________________________
 
 Route::get('/colors', [ColorController::class, 'getAllColors']);
+Route::get('/getColor', [ColorController::class, 'getColor']);
 Route::post('/color', [ColorController::class, 'addColor']);
 Route::delete('/color/{id}', [ColorController::class, 'deleteColor']);
 
@@ -84,6 +85,7 @@ Route::delete('/color/{id}', [ColorController::class, 'deleteColor']);
 // __ RACE ________________________________________________________________
 
 Route::get('/races', [RaceController::class, 'getAllRaces']);
+Route::get('/getRace', [RaceController::class, 'gatRace']);
 Route::post('/getRaceAnimal',[RaceController::class, 'getRaceAnimal']);
 Route::post('/race', [RaceController::class, 'addRace']);
 Route::delete('/race/{id}', [RaceController::class, 'deleteRace']);
@@ -116,3 +118,8 @@ Route::post('/finAlert',[AnimalController::class, 'finAlertProfil']);
 Route::get('/necklaces', [NecklaceController::class, 'getAllNecklaces']);
 Route::post('/necklace', [NecklaceController::class, 'addNecklace']);
 Route::delete('/necklace/{id}', [NecklaceController::class, 'deleteNecklace']);
+
+
+// __ IMAGES ____________________________________________________________
+
+Route::post('/uploadImage', [ImageController::class, 'uploadImage']);

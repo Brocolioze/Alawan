@@ -14,8 +14,13 @@ class RaceController extends Controller
     public function getAllRaces()
     {
         $races = Race::all();
-
         return response()->json(['message' => 'Races found', 'data' => $races], 200);
+    }
+
+    public function getRace($id)
+    {
+        $race = Race::findOrFail($id);
+        return $race;
     }
 
 

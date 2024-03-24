@@ -14,10 +14,13 @@ class ColorController extends Controller
     //afficher les color
     public function getAllColors()
     {
-        //$colors = Color::all();
-        //return response()->json(['message' => 'Colors found', 'data' => $colors], 200);
-
         return ColorResource::collection(Color::all());
+    }
+
+    public function getColor($id)
+    {
+        $color = Color::findOrFail($id);
+        return $color;
     }
 
     //ajouter color
