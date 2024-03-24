@@ -85,7 +85,7 @@ Route::delete('/color/{id}', [ColorController::class, 'deleteColor']);
 // __ RACE ________________________________________________________________
 
 Route::get('/races', [RaceController::class, 'getAllRaces']);
-Route::get('/getRace', [RaceController::class, 'getRace']);
+Route::get('/getRace/{id}', [RaceController::class, 'getRace']);
 Route::post('/getRaceAnimal',[RaceController::class, 'getRaceAnimal']);
 Route::post('/race', [RaceController::class, 'addRace']);
 Route::delete('/race/{id}', [RaceController::class, 'deleteRace']);
