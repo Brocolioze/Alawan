@@ -19,7 +19,6 @@ class AlertController extends Controller
         return response()->json(['message' => 'Alerts found', 'data' => $alerts], 200);
     }
 
-
     public function addAlert(Request $request)
     {
         try {
@@ -41,7 +40,6 @@ class AlertController extends Controller
         }
     }
 
-
     public function deleteAlert($id)
     {
         try {
@@ -58,7 +56,8 @@ class AlertController extends Controller
         }
     }
 
-    public function getAlert(Request $request){
+    public function getAlert(Request $request)
+    {
         try{
             $alert = Alert::where('idAnimal',$request->id)->where('dateFind',NULL)->first();
             if($alert->alerteFound == 1){

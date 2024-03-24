@@ -35,6 +35,8 @@ use App\Models\Race;
 use App\Http\Resources\RaceResource;
 use App\Http\Controllers\RaceController;
 
+use App\Http\Controllers\ImageController;
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) { return $request->user(); });
 Route::post('/enregistrer-rfid', function () { return response()->file(public_path('enregistrer_rfid.php')); });
@@ -65,13 +67,6 @@ Route::get('/animals', [AnimalController::class, 'getAllAnimals']);
 Route::post('/animal', [AnimalController::class, 'addAnimal']);
 Route::delete('/animal/{id}', [AnimalController::class, 'deleteAnimal']);
 Route::post('/animals/person', [AnimalController::class, 'getAnimalsOfLoggedInPerson']);
-/*
-Route::middleware('auth:api')->get('/animals', [AnimalController::class, 'getAllAnimals']);
-
-Route::middleware('auth:api')->post('/animal', [AnimalController::class, 'addAnimal']);
-Route::middleware('auth:api')->delete('/animal/{id}', [AnimalController::class, 'deleteAnimal']);
-Route::middleware('auth:api')->put('/animal/{id}', [AnimalController::class, 'updateAnimal']);
-*/
 
 
 // __ COLOR _______________________________________________________________
@@ -104,6 +99,7 @@ Route::get('/alerts', [AlertController::class, 'getAllAlerts']);
 Route::post('/alert', [AlertController::class, 'addAlert']);
 Route::delete('/alert/{id}', [AlertController::class, 'deleteAlert']);
 Route::post('/getAlert', [AlertController::class, 'getAlert']);
+
 
 // __ ANIMAL ALERT ________________________________________________________
 
