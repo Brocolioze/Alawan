@@ -22,21 +22,23 @@ class AlertController extends Controller
     public function addAlert(Request $request)
     {
         try {
+            Log::debug('tu rentres xderdans');
             $alert = new Alert([
                 'idAnimal' => $request->input('idAnimal'),
                 'dateLost' => $request->input('dateLost'),
                 'dateFind' => $request->input('dateFind'),
                 'place' => $request->input('place'),
                 'description' => $request->input('description'),
-                'alerteFound' => $request->input('alerteFound')
+                'alerteFound' => 0
             ]);
-
+            Log::debug($alert);
             $alert->save();
-
-            return response()->json(['message' => 'Alert added successfully', 'data' => $alert], 201);
+            Log::debug("sauvegarde");
+            return response()->json(true);
         }
         catch (QueryException $e) {
-            return response()->json(['message' => 'Failed to add alert: ' . $e->getMessage()], 500);
+            Log::debug($e);
+            return response()->json(false);
         }
     }
 
