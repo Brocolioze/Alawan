@@ -14,10 +14,10 @@ class ImageController extends Controller
 
         // Save the image to storage
         $imageName = 'image_' . time() . '.png'; // Or use any other suitable naming convention
-        file_put_contents(public_path('images/' . $imageName), $decodedImage);
+        file_put_contents(public_path('img/' . $imageName), $decodedImage);
 
         // You can also save image details to a database if needed
 
-        return response()->json(['images/' . $imageName]);
+        return response()->json([$imageName]);
     }
 }

@@ -69,7 +69,7 @@ class AnimalController extends Controller
             $animal = new Animal([
                 'idPerson' => $request->input('idPerson'),
                 'idRace' => $request->input('idRace'),
-                'idNecklace' => $request->input('idNecklace'),
+                'idNecklace' => null,
                 'name' => $request->input('name'),
                 'picture' => $request->input('picture'),
                 'birth' => $request->input('birth'),
@@ -78,7 +78,7 @@ class AnimalController extends Controller
 
             $animal->save();
 
-            return response()->json(['message' => 'Animal added successfully', 'data' => $animal], 201);
+            return response()->json($animal->id);
         }
         catch (QueryException $e) {
             return response()->json(['message' => 'Failed to add animal: ' . $e->getMessage()], 500);
