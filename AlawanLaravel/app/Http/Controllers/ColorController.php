@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Models\Color;
 use App\Http\Resources\ColorResource;
 
+use Illuminate\Support\Facades\Log;
+
 class ColorController extends Controller
 {
 

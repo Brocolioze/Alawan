@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 use App\Models\Alert;
 use App\Http\Resources\AlertResource;
+
+use Carbon\Carbon;
+
 use Illuminate\Support\Facades\Log;
 
 class AlertController extends Controller
@@ -25,7 +28,7 @@ class AlertController extends Controller
             Log::debug('tu rentres xderdans');
             $alert = new Alert([
                 'idAnimal' => $request->input('idAnimal'),
-                'dateLost' => $request->input('dateLost'),
+                'dateLost' => Carbon::now()->format('Y-m-d'),
                 'dateFind' => $request->input('dateFind'),
                 'place' => $request->input('place'),
                 'description' => $request->input('description'),

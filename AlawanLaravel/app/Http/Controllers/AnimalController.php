@@ -66,6 +66,7 @@ class AnimalController extends Controller
     public function addAnimal(Request $request)
     {
         try {
+            Log::debug("tu es dedans");
             $animal = new Animal([
                 'idPerson' => $request->input('idPerson'),
                 'idRace' => $request->input('idRace'),
@@ -76,11 +77,19 @@ class AnimalController extends Controller
                 'research' => $request->input('research')
             ]);
 
+            if($animal->research = true){
+                $animal->research = 1;
+            }
+            else{
+                $animal->research = 0;
+            }
             $animal->save();
-
+            log::debug($animal);
+            log::debug($animal->id);
             return response()->json($animal->id);
         }
         catch (QueryException $e) {
+            Log::debug($e);
             return response()->json(['message' => 'Failed to add animal: ' . $e->getMessage()], 500);
         }
     }

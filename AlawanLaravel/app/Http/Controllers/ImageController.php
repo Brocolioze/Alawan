@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Log;
+
 class ImageController extends Controller
 {
     public function uploadImage(Request $request)
@@ -18,6 +20,6 @@ class ImageController extends Controller
 
         // You can also save image details to a database if needed
 
-        return response()->json([$imageName]);
+        return response()->json($imageName);
     }
 }

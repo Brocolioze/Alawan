@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Models\Race;
 use App\Http\Resources\RaceResource;
 
+use Illuminate\Support\Facades\Log;
+
 class RaceController extends Controller
 {
 
