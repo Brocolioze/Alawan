@@ -56,7 +56,7 @@ Route::middleware('auth:api')->post('/logout', [PersonController::class, 'logout
 Route::post('/getMaster', [PersonController::class, 'getMaster']);
 
 
-// __ EMAIL ______________________________________________________________ 
+// __ EMAIL _______________________________________________________________
 
 Route::get('/emails', [PersonController::class, 'getAllEmails']);
 
@@ -116,6 +116,13 @@ Route::post('/necklace', [NecklaceController::class, 'addNecklace']);
 Route::delete('/necklace/{id}', [NecklaceController::class, 'deleteNecklace']);
 
 
-// __ IMAGES ____________________________________________________________
+// __ IMAGES ______________________________________________________________
 
 Route::post('/uploadImage', [ImageController::class, 'uploadImage']);
+
+
+// __ ANIMAL COLOR ________________________________________________________
+
+Route::get('/animalColors', [AnimalColorController::class, 'getAllAnimalColor']);
+Route::post('/animalColor', [AnimalColorController::class, 'addAnimalColor']);
+Route::delete('/animalColor/{id}', [AnimalColorController::class, 'deleteAnimalColor']);
