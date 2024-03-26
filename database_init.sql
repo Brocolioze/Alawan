@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS AnimalColor ;
 DROP TABLE IF EXISTS Animal ;
 DROP TABLE IF EXISTS Person ;
 DROP TABLE IF EXISTS Address ;
-DROP TABLE IF EXISTS necklace ;
+DROP TABLE IF EXISTS Necklace ;
 DROP TABLE IF EXISTS Color ;
 DROP TABLE IF EXISTS Race ;
 
@@ -178,21 +178,21 @@ INSERT INTO AnimalColor(idColor,idAnimal)
 VALUES  (1,1),
         (2,2),
         (3,3),
-		(4,3),
-		(5,1),
-		(6,7),
+		(3,4),
+		(1,5),
+		(7,6),
 		(7,7),
-		(8,5),
-		(9,1),
-		(10,2),
-		(11,4),
-		(12,8),
-		(13,10);
+		(5,8),
+		(1,9),
+		(2,10),
+		(4,11),
+		(8,12),
+		(10,13);
 
 INSERT INTO Alert(idAnimal,dateLost,description,alerteFound)
 VALUES (1,'2024-01-01',"mon chien que j'adore est perdu j'ai besoin d'aide vite!",false),
 	   (5,'2023-12-01',"C'est l'amour de ma vie. J'ai besoin d'aide le plus vite possible",false),
-	   (8,'2024-03-20',"Comment je peux vivre sans mon super cgien dogo8."),
+	   (8,'2024-03-20',"Comment je peux vivre sans mon super cgien dogo8.",false),
 	   (10,'2024-01-20',"Dogo10 mon chien préfèré de mes 40 chiens est perdu",false),
 	   (12,'2024-03-20',"Dogo12 mon bébé chien est pas capable de vivre tout seul retrouvez le s'il vous plaît",false),
 	   (13,'2023-12-31',"Mon chien n'aime pas le nouvelle ans alors il ets partie retrouvez le s'il vous plaît",false),
