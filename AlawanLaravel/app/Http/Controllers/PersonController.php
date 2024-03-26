@@ -154,6 +154,22 @@ class PersonController extends Controller
             return response()->json($person);
         }
         catch (\Exception $e) {
+            Log::debug($e);
+            return response()->json(['message' => 'Email not found'], 404);
+        }
+        catch (QueryException $e) {
+            Log::debug($e);
+            return response()->json(['message' => 'Failed to delete person: '], 500);
+        }
+    }
+
+    public function getPerson(Request $request){
+        try{
+            $person = findOrFail($request->id);
+            return response()->json($person);
+        }
+        catch (\Exception $e) {
+            Log::debug($e);
             return response()->json(['message' => 'Email not found'], 404);
         }
         catch (QueryException $e) {

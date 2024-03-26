@@ -54,7 +54,7 @@ Route::middleware('auth:api')->get('/persons', [PersonController::class, 'getAll
 Route::middleware('auth:api')->get('/user', [PersonController::class, 'getLoggedInPerson']);
 Route::middleware('auth:api')->post('/logout', [PersonController::class, 'logout']);
 Route::post('/getMaster', [PersonController::class, 'getMaster']);
-
+Route::post('/getPerson', [PersonController::class, 'getPerson']);
 
 // __ EMAIL _______________________________________________________________
 
