@@ -144,26 +144,49 @@ VALUES 	("ABC123"),
 	 	("XXX000");
  
 INSERT INTO Person(idAddress, name, lastName, email, password, phone, admin, invite)
-
 VALUES  (1, "Antoine", "Lefebvre", "antoinelefebvre@hotmail.com", "$2y$12$P1spiC5wcubjcVE3pKOnQuSkDEuCZTU5tGX.7bylRXBlctSmrku2G", "819-999-9999", false, false),
         (2, "Zak", "El Bahodi", "zakelbahodi@homtail.com", "$2y$12$P1spiC5wcubjcVE3pKOnQuSkDEuCZTU5tGX.7bylRXBlctSmrku2G", "819-999-9999",true, false),
-	(1, "Alexandre", "Carle", "alex.carle@hotmail.com", "$2y$12$P1spiC5wcubjcVE3pKOnQuSkDEuCZTU5tGX.7bylRXBlctSmrku2G", "819-668-7152", false, false);
+		(1, "Alexandre", "Carle", "alex.carle@hotmail.com", "$2y$12$P1spiC5wcubjcVE3pKOnQuSkDEuCZTU5tGX.7bylRXBlctSmrku2G", "819-668-7152", false, false);
+		
 
 		
 INSERT INTO Person(name, lastName, invite)
 VALUES  ("Invité", "Alawan", 1);
 
+INSERT INTO Person(name, lastName, email, password, phone, admin, invite)
+VALUES  ("Christos", "Tostitos", "christoslatostitos@hotmail.com", "$2y$12$P1spiC5wcubjcVE3pKOnQuSkDEuCZTU5tGX.7bylRXBlctSmrku2G", "819-999-9999", false, false),
+        ("tartaros", "El Doritos", "tartaroseldoritos@homtail.com", "$2y$12$P1spiC5wcubjcVE3pKOnQuSkDEuCZTU5tGX.7bylRXBlctSmrku2G", "819-999-9999",false, false),
+		("Jacob", "Lorbe", "jacoblorbe@hotmail.com", "$2y$12$P1spiC5wcubjcVE3pKOnQuSkDEuCZTU5tGX.7bylRXBlctSmrku2G", "819-668-7152", false, false);
 
  
 INSERT INTO Animal(idPerson, idRace, idNecklace, name, picture, birth, research)
 VALUES  	(1,1,1,"dogo1","image",'2024-01-01',false),
         	(2,2,2,"dogo2","image",'2024-02-02',false),
-	   	(3,3,3,"dogo3","image",'2000-01-01',false);
+	   		(3,3,3,"dogo3","image",'2000-01-01',false),
+			(1,4,null,"dogo4",'image','2022-06-20',false),
+			(1,5,null,"dogo5",'image','2024-03-25',false),
+			(1,6,null,"dogo6",'image','2023-01-10',false),
+			(2,7,null,'dogo7','image','2020-02-20',false),
+			(3,5,null,'dogo8','image','2018-04-14',false),
+			(5,2,null,'dogo9','image','2024-01-30',false),
+			(6,6,null,'dogo10','image','2024-02-27',false),
+			(7,3,null,'dogo11','image','2023-12-31',false),
+			(7,10,null,'dogo12','image','2024-03-25',false),
+			(5,11,null,'dogo13','image','2024-05-20',false);
  
 INSERT INTO AnimalColor(idColor,idAnimal)
 VALUES  (1,1),
         (2,2),
-        (3,3);
- 
+        (3,3),
+		(4,3),
+		(5,1),
+		(6,7),
+		(7,7),
+		(8,5),
+		(9,1),
+		(9)
+
 INSERT INTO Alert(idAnimal,dateLost,description,alerteFound)
-VALUES (1,'2024-01-01',"mon chien que j'adore est perdu j'ai besoin d'aide vite!",false);
+VALUES (1,'2024-01-01',"mon chien que j'adore est perdu j'ai besoin d'aide vite!",false),
+	   (5,'2023-12-01',"C'est l'amour de ma vie. J'ai besoin d'aide le plus vite possible",false),
+	   (8,'2024-03-20',"Comment je peux vivre sans mon super cgien dogo8.");
