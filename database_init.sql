@@ -184,9 +184,17 @@ VALUES  (1,1),
 		(7,7),
 		(8,5),
 		(9,1),
-		(9)
+		(10,2),
+		(11,4),
+		(12,8),
+		(13,10);
 
 INSERT INTO Alert(idAnimal,dateLost,description,alerteFound)
 VALUES (1,'2024-01-01',"mon chien que j'adore est perdu j'ai besoin d'aide vite!",false),
 	   (5,'2023-12-01',"C'est l'amour de ma vie. J'ai besoin d'aide le plus vite possible",false),
-	   (8,'2024-03-20',"Comment je peux vivre sans mon super cgien dogo8.");
+	   (8,'2024-03-20',"Comment je peux vivre sans mon super cgien dogo8."),
+	   (10,'2024-01-20',"Dogo10 mon chien préfèré de mes 40 chiens est perdu",false),
+	   (12,'2024-03-20',"Dogo12 mon bébé chien est pas capable de vivre tout seul retrouvez le s'il vous plaît",false),
+	   (13,'2023-12-31',"Mon chien n'aime pas le nouvelle ans alors il ets partie retrouvez le s'il vous plaît",false),
+	   (11,'2024-01-01',"dogo11 dogo11 dogo11 dogo11 dogo11 dogo11",false),
+	   (9,'2024-03-26',"dogo9 il est mon paradis d'où son nom 999",false);
