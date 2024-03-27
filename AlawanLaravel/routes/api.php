@@ -38,7 +38,7 @@ use App\Http\Controllers\RaceController;
 use App\Http\Controllers\ImageController;
 
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) { return $request->user(); });
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) { return $request->user(); });
 Route::post('/enregistrer-rfid', function () { return response()->file(public_path('enregistrer_rfid.php')); });
 
 
@@ -55,6 +55,7 @@ Route::middleware('auth:api')->get('/user', [PersonController::class, 'getLogged
 Route::middleware('auth:api')->post('/logout', [PersonController::class, 'logout']);
 Route::post('/getMaster', [PersonController::class, 'getMaster']);
 Route::post('/getPerson', [PersonController::class, 'getPerson']);
+Route::post('/modifyPerson',[PersonController::class, 'modifyPerson']);
 
 // __ EMAIL _______________________________________________________________
 

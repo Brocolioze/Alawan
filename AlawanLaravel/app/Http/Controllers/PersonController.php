@@ -165,8 +165,42 @@ class PersonController extends Controller
 
     public function getPerson(Request $request){
         try{
-            $person = findOrFail($request->id);
+            $person =  Person::findOrFail($request->id);
+            if($person->invite == 1){
+                $person->invite = true;
+            }
+            else{
+                $person->invite = false;
+            }
+            if($person->admin == 1){
+                $person->admin = true;
+            }
+            else{
+                $person->admin = false;
+            }
             return response()->json($person);
+        }
+        catch (\Exception $e) {
+            Log::debug($e);
+            return response()->json(['message' => 'Email not found'], 404);
+        }
+        catch (QueryException $e) {
+            Log::debug($e);
+            return response()->json(['message' => 'Failed to delete person: '], 500);
+        }
+    }
+
+    public function modifyPerson(Request $request){
+        try{
+            Log::debug("tye rentre dedans");
+            $person = Person::findOrFail($request->id);
+            $person->name = $request->name;
+            $person->lastName = $request->lastName;
+            $person->email = $request->email;
+            $person->phone = $request->phone;
+            Log::debug($person);
+            $person->save();
+            return response()->json(true);
         }
         catch (\Exception $e) {
             Log::debug($e);
