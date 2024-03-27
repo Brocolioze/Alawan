@@ -77,6 +77,11 @@ class AnimalController extends Controller
                 'research' => $request->input('research')
             ]);
 
+            if($animal->birth != null){
+                $animal->birth = Carbon::parse($animal->birth)->format('Y-m-d');
+                Log::debug($animal->birth);
+            }
+
             if($animal->research = true){
                 $animal->research = 1;
             }
