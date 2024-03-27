@@ -24,11 +24,11 @@
         <div class="div-SrS">
           <div class="link-framer-k6hho3-xpn">
             <div class="group-3-8mC">
-              <img class="paw-T2n" src="img/paw-2nr.png"/>
+              <img class="paw-T2n" src="img/others/paw-2nr.png"/>
             </div>
             <div class="alawan-Wmk">Alawan</div>
           </div>
-          <button class="link-framer-k6hho3-amc"><img class="image-tXQ" src="img/image-iSi.png"/><p class="download-app-QVk">Download App</p></button>
+          <button class="link-framer-k6hho3-amc"><img class="image-tXQ" src="img/others/image-iSi.png"/><p class="download-app-QVk">Download App</p></button>
         </div>
       </div>
       <div class="div-framer-3c57el-TD8">
@@ -36,12 +36,12 @@
           <div class="div-framer-icswyh-V9p">
             <div class="group-6-Dbc">
               <div class="group-1-LAS">
-                <img class="paw-ewp" src="img/paw-sea.png"/>
+                <img class="paw-ewp" src="img/others/paw-sea.png"/>
               </div>
               <p class="alawan-aKg">Alawan </p>
             </div>
             <p class="votre-compagnon-ultime-pour-retrouver-les-chiens-perdus--Tnn">Votre compagnon ultime pour retrouver <br class="brP"> les chiens perdus !</p>
-            <button class="link-framer-k6hho3-7Kc"><img class="image-qWW" src="img/image-Jte.png"/><p class=" telecharger-maintenant-NWS">Telecharger maintenant</p></button>
+            <button class="link-framer-k6hho3-7Kc"><img class="image-qWW" src="img/others/image-Jte.png"/><p class=" telecharger-maintenant-NWS">Telecharger maintenant</p></button>
           </div>
         </div>
       </div>
@@ -51,12 +51,12 @@
         <div class="frame-3303-B6W">
           <div class="group-44-VN6">
             <div class="group-41-pfG">
-              <img class="iphone-11-extra-shadow-y2N" src="img/iphone-11-extra-shadow-hyY.png"/>
+              <img class="iphone-11-extra-shadow-y2N" src="img/others/iphone-11-extra-shadow-hyY.png"/>
               <div class="frame-3302-GnA">
                 <div class="android-small-21-bZY">
                   <div class="figmap-WwQ">
                     <div class="group-4-R2n">
-                      <img class="paw-j3U" src="img/paw.png"/>
+                      <img class="paw-j3U" src="img/others/paw.png"/>
                     </div>
                   </div>
                 </div>
@@ -65,22 +65,22 @@
                   </div>
                   <div class="nav-items-cmU">
                     <div class="home-9WW">
-                      <img class="home-6wY" src="img/home-2r2.png"/>
+                      <img class="home-6wY" src="img/others/home-2r2.png"/>
                       <p class="home-qeE">Home</p>
                     </div>
                     <div class="search-MsU">
-                      <img class="search-normal-WVU" src="img/search-normal-m6n.png"/>
+                      <img class="search-normal-WVU" src="img/others/search-normal-m6n.png"/>
                       <p class="search-r3Y">Search</p>
                     </div>
                     <div class="vuesax-linear-scan-7kA">
-                      <img class="warning-EZt" src="img/warning.png"/>
+                      <img class="warning-EZt" src="img/others/warning.png"/>
                     </div>
                     <div class="profile-k2S">
-                      <img class="profile-Vki" src="img/profile.png"/>
+                      <img class="profile-Vki" src="img/others/profile.png"/>
                       <p class="profile-d6E">Profile</p>
                     </div>
                     <div class="history-xPQ">
-                      <img class="chat-v5L" src="img/chat-HBC.png"/>
+                      <img class="chat-v5L" src="img/others/chat-HBC.png"/>
                       <p class="chat-4BY">Chat</p>
                     </div>
                   </div>
@@ -88,7 +88,7 @@
               </div>
             </div>
             <div class="group-40-Z8J">
-              <img class="iphone-11-extra-shadow-sPt" src="img/iphone-11-extra-shadow.png"/>
+              <img class="iphone-11-extra-shadow-sPt" src="img/others/iphone-11-extra-shadow.png"/>
               <div class="frame-3302-zDc">
                 <div class="android-small-21-7JE">
                   <div class="auto-group-f2rl-rFp">
@@ -101,12 +101,12 @@
                         </span>
                         <span class="bonjour-dave-nous-esprons-que-vos-animaux-se-portent-bien-U2J-sub-1">Nous espérons que vos animaux se portent bien</span>
                       </p>
-                      <img class="settings-7st" src="img/settings.png"/>
+                      <img class="settings-7st" src="img/others/settings.png"/>
                     </div>
                     <div class="auto-group-2fyr-TB4">
                       <div class="group-12-Zzn">
                         <div class="auto-group-pxnr-VdY">
-                          <img class="dog-kC6" src="img/dog-kvJ.png"/>
+                          <img class="dog-kC6" src="img/others/dog-kvJ.png"/>
                         </div>
                         <div class="auto-group-qxla-gLe">
                           <p class="pets-Ed4">Pets</p>
@@ -115,7 +115,7 @@
                       </div>
                       <div class="group-13-tBp">
                         <div class="auto-group-aohg-p5U">
-                          <img class="warning-86A" src="img/warning-t2S.png"/>
+                          <img class="warning-86A" src="img/others/warning-t2S.png"/>
                         </div>
                         <div class="auto-group-yxru-f66">
                           <p class="alerts-1fk">Alerts</p>
@@ -126,7 +126,7 @@
                     <p class="vos-animaux-G5t">Vos animaux</p>
                     <div class="frame-53-b8A">
                       <div class="auto-group-tvie-64v">
-                        <img class="dog-D9Y" src="img/dog-QnS.png"/>
+                        <img class="dog-D9Y" src="img/others/dog-QnS.png"/>
                       </div>
                       <div class="group-15-9J6">
                         <div class="group-14-sjt">
@@ -135,12 +135,12 @@
                         </div>
                         <p class="race-berger-allemand-uAn">Race : Berger allemand </p>
                       </div>
-                      <img class="vector-3Gz" src="img/vector-cqL.png"/>
-                      <img class="vector-AcW" src="img/vector-spS.png"/>
+                      <img class="vector-3Gz" src="img/others/vector-cqL.png"/>
+                      <img class="vector-AcW" src="img/others/vector-spS.png"/>
                     </div>
                     <div class="frame-54-rkE">
                       <div class="auto-group-ewae-Zee">
-                        <img class="dog-7RG" src="img/dog.png"/>
+                        <img class="dog-7RG" src="img/others/dog.png"/>
                       </div>
                       <div class="group-15-qs4">
                         <div class="group-14-aJr">
@@ -149,12 +149,12 @@
                         </div>
                         <p class="race-berger-allemand-ztN">Race : Berger allemand </p>
                       </div>
-                      <img class="vector-8Un" src="img/vector.png"/>
-                      <img class="vector-4NS" src="img/vector-4MC.png"/>
+                      <img class="vector-8Un" src="img/others/vector.png"/>
+                      <img class="vector-4NS" src="img/others/vector-4MC.png"/>
                     </div>
                     <div class="frame-55-Ne2">
                       <div class="auto-group-po6e-HFC">
-                        <img class="dog-qGi" src="img/dog-ye6.png"/>
+                        <img class="dog-qGi" src="img/others/dog-ye6.png"/>
                       </div>
                       <div class="group-15-xs8">
                         <div class="group-14-6TY">
@@ -163,8 +163,8 @@
                         </div>
                         <p class="race-berger-allemand-jFc">Race : Berger allemand </p>
                       </div>
-                      <img class="vector-fux" src="img/vector-R7L.png"/>
-                      <img class="vector-1D8" src="img/vector-mJn.png"/>
+                      <img class="vector-fux" src="img/others/vector-R7L.png"/>
+                      <img class="vector-1D8" src="img/others/vector-mJn.png"/>
                     </div>
                     <div class="frame-53-j98">Ajouter un compagnon</div>
                   </div>
@@ -173,22 +173,22 @@
                     </div>
                     <div class="nav-items-2nS">
                       <div class="home-MJv">
-                        <img class="home-hta" src="img/home.png"/>
+                        <img class="home-hta" src="img/others/home.png"/>
                         <p class="home-S5U">Home</p>
                       </div>
                       <div class="search-ZA6">
-                        <img class="search-normal-7SW" src="img/search-normal.png"/>
+                        <img class="search-normal-7SW" src="img/others/search-normal.png"/>
                         <p class="recherche-ehL">Recherche</p>
                       </div>
                       <div class="vuesax-linear-scan-yzW">
-                        <img class="warning-u7U" src="img/warning-Fbc.png"/>
+                        <img class="warning-u7U" src="img/others/warning-Fbc.png"/>
                       </div>
                       <div class="profile-R5p">
-                        <img class="profile-yNE" src="img/profile-Mjc.png"/>
+                        <img class="profile-yNE" src="img/others/profile-Mjc.png"/>
                         <p class="profile-hp2">Profile</p>
                       </div>
                       <div class="history-qvE">
-                        <img class="chat-cAJ" src="img/chat.png"/>
+                        <img class="chat-cAJ" src="img/others/chat.png"/>
                         <p class="chat-Lrz">Chat</p>
                       </div>
                     </div>
@@ -197,7 +197,7 @@
               </div>
             </div>
             <div class="group-42-S9L">
-              <img class="iphone-11-extra-shadow-B6v" src="img/iphone-11-extra-shadow.png"/>
+              <img class="iphone-11-extra-shadow-B6v" src="img/others/iphone-11-extra-shadow.png"/>
               <div class="frame-3302-uHp">
                 <div class="android-small-21-dUi">
                   <div class="group-32-AzS">
@@ -210,7 +210,7 @@
                     <div class="group-30-tZ4">
                       <div class="group-3-phc">
                         <div class="group-1-ZQJ">
-                          <img class="paw-5Ne" src="img/paw-Sea.png"/>
+                          <img class="paw-5Ne" src="img/others/paw-Sea.png"/>
                         </div>
                         <p class="alawan-Pu8">alawan </p>
                       </div>
@@ -221,7 +221,7 @@
                       </div>
                       <div class="frame-62-Pw4">
                         <p class="ecrivez-votre-message-ici--VjC">Ecrivez votre message ici ...</p>
-                        <img class="vuesax-bold-send-pmU" src="img/vuesax-bold-send.png"/>
+                        <img class="vuesax-bold-send-pmU" src="img/others/vuesax-bold-send.png"/>
                       </div>
                       <div class="frame-62-LE2">
                         <p class="salut-john-oui-en-effet-ctait-une-rencontre-inattendue-le-pauvre-chien-semblait-vraiment-perdu-Fbt">
@@ -235,14 +235,14 @@
                       <div class="rectangle-20-43Y">
                       </div>
                       <div class="group-33-Pbc">
-                        <img class="icon-arrow-left-7Xc" src="img/icon-arrow-left.png"/>
+                        <img class="icon-arrow-left-7Xc" src="img/others/icon-arrow-left.png"/>
                         <div class="alexandre-carle-EcE">Alexandre Carle</div>
                         <div class="avatar-LfG">
                           <div class="frame-3293-UFg">AC</div>
                         </div>
                         <div class="line-14-XDx">
                         </div>
-                        <img class="phone-rn2" src="img/phone.png"/>
+                        <img class="phone-rn2" src="img/others/phone.png"/>
                       </div>
                     </div>
                   </div>
@@ -254,10 +254,10 @@
       </div>
       <div class="div-framer-11v3gxp-hne">
         <div class="group-RCr">
-          <img class="bg-Lqc" src="img/app-store.png"/>
+          <img class="bg-Lqc" src="img/others/app-store.png"/>
         </div>
         <div class="group-7DQ">
-          <img class="bg-3sk" src="img/google-play.png"/>
+          <img class="bg-3sk" src="img/others/google-play.png"/>
       </div>
     </div>
     <div class="auto-group-cqhy-u4i">
@@ -270,7 +270,7 @@
                 <div class="features-SMU">Features</div>
                 <div class="div-framer-1qn37k0-y6W">
                   <div class="tripsy-7iW">Tripsy</div>
-                  <img class="image-EYE" src="img/image.png"/>
+                  <img class="image-EYE" src="img/others/image.png"/>
                 </div>
                 <div class="auto-group-qo9p-NeS">
                   <div class="updates-K3t">Updates</div>
@@ -304,7 +304,7 @@
           </div>
           <div class="div-framer-1tbsbev-Cqk">
             
-            <div class="div-UoG">© 2023 Tripsy LLC<img class="link-framer-59sgbn-x4E" src="img/link-framer-59sgbn.png"/></div>
+            <div class="div-UoG">© 2023 Tripsy LLC<img class="link-framer-59sgbn-x4E" src="img/others/link-framer-59sgbn.png"/></div>
           </div>
         </div>
       </div>
@@ -332,7 +332,7 @@
             <div class="auto-group-zxts-S5C">
               <div class="div-framer-1tw5w19-Y1k">
                 <div class="group-45-GyL">
-                  <img class="vector-C6J" src="img/vector-Y22.png"/>
+                  <img class="vector-C6J" src="img/others/vector-Y22.png"/>
                 </div>
                 <div class="frame-3304-7yx">
                   <div class="alertes-instantanes-T2E">Alertes Instantanées</div>
@@ -340,7 +340,7 @@
                 </div>
               </div>
               <div class="div-framer-1tw5w19-3FL">
-                <img class="group-50-PKC" src="img/group-50.png"/>
+                <img class="group-50-PKC" src="img/others/group-50.png"/>
                 <div class="frame-3304-W8v">
                   <div class="communaut-unie-38r">Communauté Unie</div>
                   <div class="utilisez-nos-fonctionnalits-de-partage-sur-les-rseaux-sociaux-pour-maximiser-la-visibilit-des-alertes-MfL">Utilisez nos fonctionnalités de partage sur les réseaux sociaux pour maximiser la visibilité des alertes.</div>
@@ -349,7 +349,7 @@
             </div>
             <div class="div-framer-1dl4hvt-1zn">
               <div class="div-framer-1tw5w19-xv2">
-                <img class="group-51-vbx" src="img/group-51.png"/>
+                <img class="group-51-vbx" src="img/others/group-51.png"/>
                 <div class="frame-3304-4iA">
                   <div class="carte-interactive-awQ">Carte Interactive</div>
                   <div class="suivez-les-emplacements-des-chiens-perdus-pour-organiser-des-efforts-de-recherche-cibls-uTt">Suivez les emplacements des chiens perdus pour organiser des efforts de recherche ciblés.</div>
