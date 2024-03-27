@@ -162,7 +162,7 @@ class AnimalController extends Controller
         try{
             $animals = Animal::where('idPerson',$request->id)->get();
             $animalIds = $animals->pluck('id')->toArray();
-            $alerts = Alert::where('idAnimal',$animalIds)->where('dateFind',NULL)->get();
+            $alerts = Alert::whereIn('idAnimal',$animalIds)->whereNull('dateFind')->get();
             $alertIds = $alerts->pluck('idAnimal')->toArray();
             $animals = Animal::whereIn('id',$alertIds)->get();
             foreach($animals as $animal){
@@ -246,5 +246,6 @@ class AnimalController extends Controller
         return response()->json(['message' => 'Animal not found'], 404);
         }
     }
+
 }
     

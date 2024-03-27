@@ -17,9 +17,26 @@ class AlertController extends Controller
 
     public function getAllAlerts()
     {
-        $alerts = Alert::all();
+        try{
+            Log::debug("tu es dedans");
+            $alerts = Alert::whereNull('dateFind')->get();
+            foreach($alert as $alerts){
+                if($alert->alertFound == 0){
+                    $alert->alertFound = false;
+                }
+                else{
+                    $alert->alertFound = true;
+                }
+            }
+            return response()->json($alert);
+        }
+        catch (QueryException $e) {
+            Log::debug($e);
+            return response()->json(['message' => 'Failed to delete alert: ' . $e->getMessage()], 500);
+        }
+        
 
-        return response()->json(['message' => 'Alerts found', 'data' => $alerts], 200);
+
     }
 
     public function addAlert(Request $request)
