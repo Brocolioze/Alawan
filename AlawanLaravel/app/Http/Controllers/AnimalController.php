@@ -182,7 +182,6 @@ class AnimalController extends Controller
         }
     }
 
-
     public function getAnimalAlert()
     {
         try{
