@@ -18,17 +18,18 @@ class AlertController extends Controller
     public function getAllAlerts()
     {
         try{
-            Log::debug("tu es dedans");
             $alerts = Alert::whereNull('dateFind')->get();
-            foreach($alert as $alerts){
-                if($alert->alertFound == 0){
-                    $alert->alertFound = false;
+            Log::debug($alerts);
+            foreach($alerts as $alert){
+                if($alert->alerteFound == 0){
+                    $alert->alerteFound = false;
                 }
                 else{
-                    $alert->alertFound = true;
+                    $alert->alerteFound = true;
                 }
             }
-            return response()->json($alert);
+            Log::debug($alerts);
+            return response()->json($alerts);
         }
         catch (QueryException $e) {
             Log::debug($e);
