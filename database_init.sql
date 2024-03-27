@@ -189,12 +189,12 @@ VALUES  (1,1),
 		(8,12),
 		(10,13);
 
-INSERT INTO Alert(idAnimal,dateLost,description,alerteFound)
-VALUES (1,'2024-01-01',"mon chien que j'adore est perdu j'ai besoin d'aide vite!",false),
-	   (5,'2023-12-01',"C'est l'amour de ma vie. J'ai besoin d'aide le plus vite possible",false),
-	   (8,'2024-03-20',"Comment je peux vivre sans mon super cgien dogo8.",false),
-	   (10,'2024-01-20',"Dogo10 mon chien préfèré de mes 40 chiens est perdu",false),
-	   (12,'2024-03-20',"Dogo12 mon bébé chien est pas capable de vivre tout seul retrouvez le s'il vous plaît",false),
-	   (13,'2023-12-31',"Mon chien n'aime pas le nouvelle ans alors il ets partie retrouvez le s'il vous plaît",false),
-	   (11,'2024-01-01',"dogo11 dogo11 dogo11 dogo11 dogo11 dogo11",false),
-	   (9,'2024-03-26',"dogo9 il est mon paradis d'où son nom 999",false);
+INSERT INTO Alert(idAnimal,dateLost,description,alerteFound,place)
+VALUES (1,'2024-01-01',"mon chien que j'adore est perdu j'ai besoin d'aide vite!",false,'5325 Bd des Forges, Trois-Rivières, QC G8Y 5L5'),
+	   (5,'2023-12-01',"C'est l'amour de ma vie. J'ai besoin d'aide le plus vite possible",false,'6500 Bd des Forges, Trois-Rivières, QC G8Y 7E3'),
+	   (8,'2024-03-20',"Comment je peux vivre sans mon super cgien dogo8.",false,'1687 Bd du Carmel, Trois-Rivières, QC G8Z 3R8'),
+	   (10,'2024-01-20',"Dogo10 mon chien préfèré de mes 40 chiens est perdu",false,'1900 Bd des Forges, Trois-Rivières, QC G8Z 0A3'),
+	   (12,'2024-03-20',"Dogo12 mon bébé chien est pas capable de vivre tout seul retrouvez le s'il vous plaît",false,'3685 Rue de la Rochelle, Trois-Rivières, QC G8Y 5N7'),
+	   (13,'2023-12-31',"Mon chien n'aime pas le nouvelle ans alors il ets partie retrouvez le s'il vous plaît",false,'3500 De Courval Rue, Trois-Rivieres QC G8Z1T2'),
+	   (11,'2024-01-01',"dogo11 dogo11 dogo11 dogo11 dogo11 dogo11",false,'5000 Bd Saint-Jean, Trois-Rivières, QC G9B 0N4'),
+	   (9,'2024-03-26',"dogo9 il est mon paradis d'où son nom 999",false,'4125 Bd des Récollets, Trois-Rivières, QC G9A 5V2');
