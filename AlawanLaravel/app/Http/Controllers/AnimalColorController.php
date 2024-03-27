@@ -17,6 +17,12 @@ class AnimalColorController extends Controller
         return AnimalColorResource::collection(AnimalColor::all());
     }
 
+    public function getAnimalColor($idAnimal)
+    {
+        $animalColor = AnimalColor::findOrFail($idAnimal);
+        return $animalColor;
+    }
+
     public function addAnimalColor(Request $request)
     {
         try {

@@ -33,7 +33,12 @@ class AnimalController extends Controller
         return response()->json($animals);
     }
 
-    
+    public function getAnimal($idAnimal)
+    {
+        $animal = Animal::findOrFail($idAnimal);
+        return $animal;
+    }
+
     public function getAnimalsOfLoggedInPerson(Request $request)
     {
         try{

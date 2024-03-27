@@ -65,6 +65,7 @@ Route::get('/emails', [PersonController::class, 'getAllEmails']);
 // __ ANIMAL ______________________________________________________________ 
 
 Route::get('/animals', [AnimalController::class, 'getAllAnimals']);
+Route::get('/animal/{idAnimal}', [AnimalController::class, 'getAnimal']);
 Route::post('/animal', [AnimalController::class, 'addAnimal']);
 Route::delete('/animal/{id}', [AnimalController::class, 'deleteAnimal']);
 Route::post('/animals/person', [AnimalController::class, 'getAnimalsOfLoggedInPerson']);
@@ -73,7 +74,7 @@ Route::post('/animals/person', [AnimalController::class, 'getAnimalsOfLoggedInPe
 // __ COLOR _______________________________________________________________
 
 Route::get('/colors', [ColorController::class, 'getAllColors']);
-Route::get('/getColor', [ColorController::class, 'getColor']);
+Route::get('/getColor/{idColor}', [ColorController::class, 'getColor']);
 Route::post('/color', [ColorController::class, 'addColor']);
 Route::delete('/color/{id}', [ColorController::class, 'deleteColor']);
 
@@ -125,5 +126,6 @@ Route::post('/uploadImage', [ImageController::class, 'uploadImage']);
 // __ ANIMAL COLOR ________________________________________________________
 
 Route::get('/animalColors', [AnimalColorController::class, 'getAllAnimalColor']);
+Route::get('/animalColor/{idAnimal}', [AnimalColorController::class, 'getAllAnimalColor']);
 Route::post('/animalColor', [AnimalColorController::class, 'addAnimalColor']);
 Route::delete('/animalColor/{id}', [AnimalColorController::class, 'deleteAnimalColor']);
