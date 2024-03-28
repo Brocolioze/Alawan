@@ -48,7 +48,7 @@ class AlertController extends Controller
                 'idAnimal' => $request->input('idAnimal'),
                 'dateLost' => Carbon::now()->format('Y-m-d'),
                 'dateFind' => $request->input('dateFind'),
-                'place' => $request->input('place'),
+                'place' => "Pavillon des Sciences, 3500 Rue de Courval, Trois-Rivières, QC G8Z 1T2",
                 'description' => $request->input('description'),
                 'alerteFound' => 0
             ]);
